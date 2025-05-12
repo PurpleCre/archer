@@ -4,19 +4,167 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Panashe Gonese" />
-    <meta name="description" content="Mahwe - A simple and elegant web application" />
+    <meta
+      name="description"
+      content="Mahwe - A simple and elegant web application"
+    />
     <meta name="keywords" content="Mahwe, web application, simple, elegant" />
     <link rel="stylesheet" href="./styles/base.css" />
     <script src="./scripts/home.js" defer></script>
     <title>Mahwe - Home</title>
   </head>
   <body>
-    <header>
-        
+    <header id="main-header" class="header">
+      <div class="logo">
+        <img src="./images/Mahwe Marketing Logo-01-01-1.svg" alt="" />
+      </div>
+      <nav>
+        <a href="#" id="ham"></a>
+        <a href="#">Who We Are</a>
+        <a href="#">What We Do</a>
+        <a href="#">Our Works</a>
+      </nav>
     </header>
     <main>
-
+      <section class="hero">
+        <div class="overlay"></div>
+        <h1 class="centered-title">Where Mining Meets Modern Marketing.</h1>
+      </section>
+      <section class="hook">
+        <h2>
+          “<span>Dig</span> <span>Deep.</span><span>Shine</span>
+          <span>Bright.</span><span>Go</span> <span>Global.”</span>
+        </h2>
+        <p>
+          We specialize in global marketing for mining ventures and precious
+          stone brands — connecting you with international investors, buyers,
+          and partners through world-class branding, storytelling, and digital
+          reach.
+        </p>
+      </section>
+      <section class="services">
+        <h2>Our Services</h2>
+        <div id="main-services" class="card">
+          <div class="service">
+            <h3>Global Investor Branding & Communication</h3>
+            <p>
+              We craft compelling investor communications that speak the
+              language of international markets. From multilingual pitch decks
+              to investor relations materials, we position your mining venture
+              as a globally viable, growth-ready opportunity — backed by trust,
+              clarity, and vision.
+            </p>
+          </div>
+          <div class="service">
+            <h3>Provenance & Ethical Storytelling for a Global Audience</h3>
+            <p>
+              Today’s buyers demand transparency. We help you craft powerful
+              narratives around ethical sourcing, cultural heritage, and
+              artisanal craftsmanship — building trust across borders and
+              appealing to conscientious luxury consumers worldwide.
+            </p>
+          </div>
+          <div class="service">
+            <h3>High-End Brand Identity for International Luxury Buyers</h3>
+            <p>
+              We develop branding and packaging tailored to global luxury
+              markets, aligning with the aesthetic expectations of buyers in
+              Paris, Dubai, New York, and beyond. From visual design to luxury
+              copywriting, your stones are positioned as elite, rare, and
+              collectible.
+            </p>
+          </div>
+        </div>
+        <div id="service-hook" class="card">
+          <h3>
+            Where Industry Meets Influence — We Power the Global Presence of
+            Mining and Gemstone Brands.
+          </h3>
+          <p>
+            At Mahwe Marketing, we specialize in elevating mining ventures and
+            luxury stone producers for the global stage. Whether you're digging
+            deep beneath the earth or polishing brilliance into every facet, we
+            connect your brand to international investors, buyers, and partners
+            through precision branding, digital strategy, and immersive
+            storytelling. From rugged operations to refined luxury, we speak
+            both languages — and translate your value into global visibility,
+            trust, and growth.
+          </p>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about-div">
+          <div id="div1" class="slide-in-right">
+            <h3>“We don’t just market — we mine value and craft desire.”</h3>
+            <p>
+              Backed by industry insight, global reach, and creative power,
+              Mahwe Marketing helps your story reach the people who matter.
+            </p>
+          </div>
+          <img src="./images/gemstone-hero.jpg" alt="" />
+        </div>
+        <div class="about-div">
+          <img src="./images/gemstone-hero.jpg" alt="" />
+          <div id="div2" class="slide-in-left">
+            <h3>“Ready to Go Global?”</h3>
+            <p>
+              Book a free consultation and let’s start building your brand’s
+              next chapter.
+            </p>
+            <a href="#contact"><button id="contact">Contact Us</button></a>
+          </div>
+        </div>
+      </section>
+      <section class="carousel">
+        <div class="slide">
+          <img src="./images/gemstone-hero.jpg" alt="" id="icon1" /><img
+            src="./images/gemstone-hero.jpg"
+            alt=""
+            id="icon2"
+          /><img src="./images/gemstone-hero.jpg" alt="" id="icon3" />
+        </div>
+        <span id="left">&lt;</span>
+        <span id="right">&gt;</span>
+        <a href="./gallery.html"><button>Explore Our Gallery</button></a>
+      </section>
+      <section class="contact" id="contact">
+        <img src="./images/gemstone-hero.jpg" alt="" />
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <form action="" method="post">
+            <div class="form-group">
+              <label for="name"
+                >Name:
+                <input type="text" id="name" name="name" required />
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="email"
+                >Email:
+                <input type="email" id="email" name="email" required />
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="message"
+                >Message:
+                <textarea id="message" name="message" required></textarea>
+              </label>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Send" />
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer-logo">Mahwe</div>
+      <nav class="footer-nav">
+        <a href="#">Who We Are</a>
+        <a href="#">What We Do</a>
+        <a href="#">Our Works</a>
+      </nav>
+      <p>&copy; 2023 Mahwe Marketing. All rights reserved.</p>
+    </footer>
   </body>
 </html>
