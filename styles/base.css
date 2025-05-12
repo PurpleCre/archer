@@ -273,7 +273,7 @@ button {
   font-size: 1em;
 }
 
-button:hover {
+#contact button:hover {
   background-image: linear-gradient(rgb(243, 23, 12), rgb(253, 114, 0));
   color: var(--text-color2);
   transform: scale3d(1.05, 1.05, 1);
