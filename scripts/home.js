@@ -1,9 +1,17 @@
+// scroll hooks
 let lastScroll = 0;
 const header = document.getElementById("main-header");
 const title = document.querySelector(".centered-title");
 const hook = document.querySelector(".hook");
 const mainServices = document.querySelector("#main-services");
 const serviceHook = document.querySelector("#service-hook");
+
+// image carousel hooks
+const track = document.querySelector(".carousel-track");
+const images = document.querySelectorAll(".carousel-track img");
+const prevBtn = document.querySelector(".carousel-btn.prev");
+const nextBtn = document.querySelector(".carousel-btn.next");
+const carousel = document.querySelector(".carousel-container");
 
 // header scroll listener
 window.addEventListener("scroll", () => {
@@ -48,3 +56,61 @@ window.addEventListener("scroll", () => {
     serviceHook.classList.add("slide-in-left");
   }
 });
+
+// image carousel logic
+let index = 0;
+
+function updateCarousel() {
+  const width = images[0].clientWidth;
+  track.style.transform = `translateX(-${index * width}px)`;
+}
+
+function nextSlide() {
+  index = (index + 1) % images.length;
+  updateCarousel();
+}
+
+function prevSlide() {
+  index = (index - 1 + images.length) % images.length;
+  updateCarousel();
+}
+
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+window.addEventListener("resize", updateCarousel);
+
+// Autoplay
+let autoPlayInterval = setInterval(nextSlide, 4000);
+
+// Pause on hover
+carousel.addEventListener("mouseover", () => clearInterval(autoPlayInterval));
+carousel.addEventListener(
+  "mouseout",
+  () => (autoPlayInterval = setInterval(nextSlide, 4000))
+);
+
+// Touch Swipe
+let startX = 0;
+let isSwiping = false;
+
+track.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+  isSwiping = true;
+});
+
+track.addEventListener("touchmove", (e) => {
+  if (!isSwiping) return;
+  const diffX = e.touches[0].clientX - startX;
+  if (Math.abs(diffX) > 50) {
+    if (diffX < 0) nextSlide();
+    else prevSlide();
+    isSwiping = false;
+  }
+});
+
+track.addEventListener("touchend", () => {
+  isSwiping = false;
+});
+
+// Initial setup
+updateCarousel();

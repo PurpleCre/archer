@@ -280,38 +280,58 @@ button:hover {
 }
 
 /* services display */
-.carousel {
+.carousel-container {
   position: relative;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   place-items: center;
   padding: 50px 0 20px 0;
-}
-
-.slide  {
-  padding: 20px 25px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-}
-
-.carousel img {
   width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-#left, #right {
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  touch-action: pan-y;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Navigation buttons */
+.carousel-btn {
   position: absolute;
-  top: 0;
-  font-size: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
   cursor: pointer;
+  z-index: 10;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-#left {
-  right: 120px;
+.carousel-btn.prev {
+  left: 10px;
 }
 
-#right {
-  right: 40px;
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-container a {
+  margin: 20px 10px;
 }
 
 /* Contact */
@@ -515,3 +535,5 @@ footer {
     transform: translateY(0);
   }
 }
+
+/* Show case Page */
