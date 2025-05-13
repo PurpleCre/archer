@@ -1,5 +1,7 @@
 /* Base styles for the application */
 :root {
+  --background-color: #f4f4f4;
+  --background-color2: #bdbdbd;
   --primary-color: #0c1e29;
   --secondary-dark: #1b2f3d;
   --accent-gold: #e7b06c;
@@ -7,7 +9,6 @@
   --background: #132733;
   --text-color: #a1a1a1;
   --text-color2: #333;
-  --background-color: #f4f4f4;
 }
 
 /* Global styles */
@@ -35,20 +36,39 @@ a {
   justify-content: space-between;
   padding: 15px 10px 0 40px;
   transition: all 0.3s ease;
-  z-index: 999;
+  z-index: 999;  
   font-size: 30px;
 }
 
 .logo {
-  width: 100px;
+  width: 250px;
   height: auto;
   filter: drop-shadow(0 0 50px var(--accent-gold));
 }
 
-nav {
+.parallelogram {
+  width: 100%;
+  /* height: 150px; */
+  background-color: var(--background-color);
+  clip-path: polygon(
+    10% 0,
+    /* top-left */ 100% 0,
+    /* top-right */ 100% 100%,
+    /* lower-right offset */ 100% 100%,
+    /* bottom right inner corner */ 25% 100%,
+    /* bottom left inner corner */ 0 100% /* lower-left offset */
+  );
   display: flex;
-  gap: 20px;
-  padding: 30px;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  font-weight: bold;
+  margin: 4rem 0 10px 100px;
+}
+
+nav {
+  gap: 10px;
+  padding: 10px 5px 10px 5px;
 }
 
 nav a:hover {
@@ -282,7 +302,7 @@ button {
 /* services display */
 .carousel-container {
   position: relative;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   place-items: center;
   padding: 50px 0 20px 0;
@@ -621,8 +641,10 @@ footer {
   display: none;
   position: fixed;
   z-index: 999;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.85);
   align-items: center;
   justify-content: center;
@@ -653,4 +675,157 @@ footer {
 /* Hide filtered items */
 .gallery-item.hidden {
   display: none;
+}
+
+/* About Page */
+
+.about-page {
+  padding: 4rem 2rem;
+  background-color: #fdfdfd;
+  color: #0c1e29;
+}
+
+/* intro section */
+#about-intro {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  p {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+}
+
+/* about nav thingy */
+.about-nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 2rem;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  padding: 0 0 20px 30px;
+}
+
+.about-nav a {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  padding: 10px;
+  text-decoration: underline dotted;
+}
+
+/* mission section */
+.mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* why us section */
+.us-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: var(--background-color);
+  margin: 260px 0 20px 0;
+}
+
+.us-container img {
+  z-index: 200;
+  transform: translateY(-200px);
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.us-div {
+  z-index: 500;
+  background-color: var(--background-color2);
+  padding: 10px 20px;
+  border-radius: 20px;
+  /* width: 400px; */
+  height: 70%;
+  transform: translate(200px, 100px);
+} 
+
+/* testimonial section */
+.testimonial {
+  margin-top: 3rem;
+  background: #fff7eb;
+  padding: 2rem;
+  border-left: 5px solid #e7b06c;
+  font-style: italic;
+}
+
+.testimonial blockquote {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  color: #555;
+}
+
+.contact-cta {
+  background: #e7b06c;
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  color: #0c1e29;
+  border-radius: 5px;
+}
+
+.contact-cta .cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0c1e29;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+
+.contact-cta .cta-button:hover {
+  background-color: #1a344a;
+}
+
+.about-page h2 {
+  font-size: 2.5rem;
+  color: #e7b06c;
+  margin-bottom: 1.5rem;
+}
+
+.about-page h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.about-page p,
+.about-page li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-page ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
 }
