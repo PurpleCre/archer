@@ -1,10 +1,10 @@
 // FILTER LOGIC
-const buttons = document.querySelectorAll(".filter-btn");
+const filterButtons = document.querySelectorAll(".filter-btn");
 const items = document.querySelectorAll(".gallery-item");
 
-buttons.forEach((button) => {
+filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    buttons.forEach((btn) => btn.classList.remove("active"));
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
     button.classList.add("active");
     const filter = button.getAttribute("data-filter");
 

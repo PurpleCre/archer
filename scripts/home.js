@@ -1,41 +1,8 @@
 // scroll hooks
-let lastScroll = 0;
-const header = document.getElementById("main-header");
-const logo = document.querySelector(".logo");
 const title = document.querySelector(".centered-title");
 const hook = document.querySelector(".hook");
 const mainServices = document.querySelector("#main-services");
 const serviceHook = document.querySelector("#service-hook");
-
-// image carousel hooks
-// const track = document.querySelector(".carousel-track");
-// const images = document.querySelectorAll(".carousel-track img");
-// const prevBtn = document.querySelector(".carousel-btn.prev");
-// const nextBtn = document.querySelector(".carousel-btn.next");
-// const carousel = document.querySelector(".carousel-container");
-
-// header scroll listener
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-
-  // Add light theme if scrolled down 50px
-  if (currentScroll > 50) {
-    header.classList.add("scrolled");
-    logo.src = "./images/mahwe-dark.jpg";
-  } else {
-    header.classList.remove("scrolled");
-    logo.src = "./images/mahwe-light.jpg";
-  }
-
-  // Hide on scroll down, show on scroll up
-  if (currentScroll > lastScroll && currentScroll > 100) {
-    header.classList.add("hide");
-  } else {
-    header.classList.remove("hide");
-  }
-
-  lastScroll = currentScroll;
-});
 
 // scroll animation triggers
 window.addEventListener("scroll", () => {

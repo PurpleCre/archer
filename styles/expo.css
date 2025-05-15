@@ -26,7 +26,7 @@ body {
 }
 
 .expo-hero {
-  background: url('img/expo-hero.jpg') center/cover no-repeat;
+  background: url('../images/gemstone.jpg') center/cover no-repeat;
   position: relative;
   height: 60vh;
   display: flex;
