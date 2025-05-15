@@ -90,6 +90,12 @@ nav a:hover {
   border-bottom: 2px solid var(--highlight);
 }
 
+.active {
+  color: var(--text-color2);
+  border-bottom: 4px solid var(--highlight);
+
+}
+
 /* triggered on scroll: start*/
 .scroll {
   background-color: var(--background-color);
