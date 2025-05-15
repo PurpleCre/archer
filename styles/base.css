@@ -53,7 +53,7 @@ a {
   font-size: 30px;
 }
 
-.logo{
+.logo {
   width: 120px;
   height: auto;
   margin-bottom: 20px;
@@ -93,7 +93,6 @@ nav a:hover {
 .active {
   color: var(--text-color2);
   border-bottom: 4px solid var(--highlight);
-
 }
 
 /* triggered on scroll: start*/
@@ -330,8 +329,8 @@ button {
 }
 
 #Carousel-slider {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  padding-bottom: 40px;
 }
 
 .carousel-container {
@@ -351,10 +350,14 @@ button {
 .carousel-container a {
   margin: 20px 10px;
 }
-#gallery-btn{
-    margin: 20px 10px;
-    text-align: center;
-    justify-self: center;
+#gallery-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 45%;
+  margin: 20px 10px;
+  text-align: center;
+  width: 200px;
+
 }
 
 #gallery-btn button:hover {
