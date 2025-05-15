@@ -1,17 +1,18 @@
 // scroll hooks
 let lastScroll = 0;
 const header = document.getElementById("main-header");
+const logo = document.querySelector(".logo");
 const title = document.querySelector(".centered-title");
 const hook = document.querySelector(".hook");
 const mainServices = document.querySelector("#main-services");
 const serviceHook = document.querySelector("#service-hook");
 
 // image carousel hooks
-const track = document.querySelector(".carousel-track");
-const images = document.querySelectorAll(".carousel-track img");
-const prevBtn = document.querySelector(".carousel-btn.prev");
-const nextBtn = document.querySelector(".carousel-btn.next");
-const carousel = document.querySelector(".carousel-container");
+// const track = document.querySelector(".carousel-track");
+// const images = document.querySelectorAll(".carousel-track img");
+// const prevBtn = document.querySelector(".carousel-btn.prev");
+// const nextBtn = document.querySelector(".carousel-btn.next");
+// const carousel = document.querySelector(".carousel-container");
 
 // header scroll listener
 window.addEventListener("scroll", () => {
@@ -20,8 +21,10 @@ window.addEventListener("scroll", () => {
   // Add light theme if scrolled down 50px
   if (currentScroll > 50) {
     header.classList.add("scrolled");
+    logo.src = "./images/mahwe-dark.jpg";
   } else {
     header.classList.remove("scrolled");
+    logo.src = "./images/mahwe-light.jpg";
   }
 
   // Hide on scroll down, show on scroll up
@@ -57,60 +60,79 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// image carousel logic
-let index = 0;
+// image carousel
+document.addEventListener("DOMContentLoaded", () => {
+  // ----- Slider Begin
+  const CaroS = document.querySelector(".Carousel-slider");
+  const CaroSlider = new MicroSlider(CaroS, {
+    indicators: true,
+    indicatorText: "",
+  });
+  const hammer = new Hammer(CaroS);
+  const CaroSTimer = 2000;
+  let CaroAutoplay = setInterval(() => CaroSlider.next(), CaroSTimer);
 
-function updateCarousel() {
-  const width = images[0].clientWidth;
-  track.style.transform = `translateX(-${index * width}px)`;
-}
+  //  ------ Mouseenter Event
+  CaroS.onmouseenter = function (e) {
+    clearInterval(CaroAutoplay);
+    console.log(e.type + "mouse detected");
+  };
 
-function nextSlide() {
-  index = (index + 1) % images.length;
-  updateCarousel();
-}
+  //  ------ Mouseleave Event
+  CaroS.onmouseleave = function (e) {
+    clearInterval(CaroAutoplay);
+    CaroAutoplay = setInterval(() => CaroSlider.next(), CaroSTimer);
+    console.log(e.type + "mouse detected");
+  };
 
-function prevSlide() {
-  index = (index - 1 + images.length) % images.length;
-  updateCarousel();
-}
+  //  ------ Mouseclick Event
+  CaroS.onclick = function (e) {
+    clearInterval(CaroAutoplay);
+    console.log(e.type + "mouse detected");
+  };
 
-nextBtn.addEventListener("click", nextSlide);
-prevBtn.addEventListener("click", prevSlide);
-window.addEventListener("resize", updateCarousel);
+  //  ------ Gesture Tap Event
+  hammer.on("tap", function (e) {
+    clearInterval(CaroAutoplay);
+    console.log(e.type + "gesture detected");
+  });
 
-// Autoplay
-let autoPlayInterval = setInterval(nextSlide, 4000);
+  //  ------ Gesture Swipe Event
+  hammer.on("swipe", function (e) {
+    clearInterval(CaroAutoplay);
+    CaroAutoplay = setInterval(() => CaroSlider.next(), CaroSTimer);
+    console.log(e.type + "gesture detected");
+  });
 
-// Pause on hover
-carousel.addEventListener("mouseover", () => clearInterval(autoPlayInterval));
-carousel.addEventListener(
-  "mouseout",
-  () => (autoPlayInterval = setInterval(nextSlide, 4000))
-);
+  let slideLink = document.querySelectorAll(".slide-item");
+  if (slideLink && slideLink !== null && slideLink.length > 0) {
+    slideLink.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        let href = link.dataset.href;
+        const target = link.dataset.target;
+        if (href !== "#") window.open(href, target);
+      });
+    });
 
-// Touch Swipe
-let startX = 0;
-let isSwiping = false;
-
-track.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-  isSwiping = true;
-});
-
-track.addEventListener("touchmove", (e) => {
-  if (!isSwiping) return;
-  const diffX = e.touches[0].clientX - startX;
-  if (Math.abs(diffX) > 50) {
-    if (diffX < 0) nextSlide();
-    else prevSlide();
-    isSwiping = false;
+    // ------ Slider End
   }
 });
 
-track.addEventListener("touchend", () => {
-  isSwiping = false;
-});
+//  link form to whatsapp
+document
+  .getElementById("whatsapp-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
 
-// Initial setup
-updateCarousel();
+    const name = document.getElementById("name").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const phoneNumber = "263776583517"; // e.g., 263771234567 (no + sign)
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      `Hello, my name is ${name}. ${message}`
+    )}`;
+
+    window.open(url, "_blank");
+  });

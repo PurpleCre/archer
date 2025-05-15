@@ -10,21 +10,30 @@
     />
     <meta name="keywords" content="Mahwe, web application, simple, elegant" />
     <link rel="stylesheet" href="./styles/base.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/micro-slider@1.1.0/dist/micro-slider.min.js"
+      defer
+    ></script>
+    <script src="./scripts/carousel2.js" defer></script>
     <script src="./scripts/home.js" defer></script>
     <title>Mahwe - Home</title>
   </head>
   <body>
     <header id="main-header" class="header">
-      <div class="logo">
         <a href="./index.html"
-          ><img src="./images/Mahwe Marketing Logo-01-01-1.svg" alt=""
+          ><img src="./images/mahwe-light.jpg" alt="" class="logo"
         /></a>
-      </div>
       <nav class="parallelogram">
         <a href="#" id="ham"></a>
-        <a href="#">Who We Are</a>
-        <a href="#">What We Do</a>
-        <a href="#">Our Works</a>
+        <a href="./about.html">Who We Are</a>
+        <a href="./about.html">What We Do</a>
+        <a href="./about.html">Our Works</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./expo.html">Our Expo</a>
       </nav>
     </header>
     <main class="about-page" id="about">
@@ -63,10 +72,10 @@
         </div>
         <div class="about-nav">
           <h2>About Us</h2>
-          <a href="#">Here</a>
-          <a href="#">Here</a>
-          <a href="#">Here</a>
-          <a href="#">Here</a>
+          <a href="#">Who We Are</a>
+          <a href="#us">Why Us</a>
+          <a href="#">Our Works</a>
+          <a href="#">Our Impact</a>
         </div>
       </section>
       <section class="mission">
@@ -118,7 +127,7 @@
           </p>
         </div>
       </section>
-      <section class="us-container">
+      <section id="us" class="us-container">
         <div class="us-div">
           <h3>Why Work With Us?</h3>
           <ul>

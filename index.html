@@ -10,21 +10,30 @@
     />
     <meta name="keywords" content="Mahwe, web application, simple, elegant" />
     <link rel="stylesheet" href="./styles/base.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/micro-slider@1.1.0/dist/micro-slider.min.js"
+      defer
+    ></script>
+    <!-- <script src="./scripts/carousel2.js" defer></script> -->
     <script src="./scripts/home.js" defer></script>
     <title>Mahwe - Home</title>
   </head>
   <body>
     <header id="main-header" class="header">
-      <div class="logo">
         <a href="./index.html"
-          ><img src="./images/Mahwe Marketing Logo-01-01-1.svg" alt=""
+          ><img src="./images/mahwe-light.jpg" alt="" class="logo"
         /></a>
-      </div>
       <nav class="parallelogram">
         <a href="#" id="ham"></a>
         <a href="./about.html">Who We Are</a>
         <a href="./about.html">What We Do</a>
         <a href="./about.html">Our Works</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./expo.html">Our Expo</a>
       </nav>
     </header>
     <main>
@@ -109,25 +118,29 @@
               Book a free consultation and let’s start building your brand’s
               next chapter.
             </p>
-            <a href="#contact"><button id="contact">Contact Us</button></a>
+            <a href="#contact-form"><button id="contact">Contact Us</button></a>
           </div>
         </div>
       </section>
-      <section class="carousel-container">
-        <div class="carousel-track">
-          <img src="./images/gemstone-hero.jpg" alt="Image 1" />
-          <img src="./images/gemstone-hero.jpg" alt="Image 2" />
-          <img src="./images/gemstone-hero.jpg" alt="Image 3" />
-        </div>
-        <button class="carousel-btn prev">‹</button>
-        <button class="carousel-btn next">›</button>
-        <a href="./gallery.html"><button>Explore Our Gallery</button></a>
+      <section id="Carousel-slider">
+        <section>
+          <div class="Carousel-slider">
+            <div class="slider-item superHero1" data-href="#"></div>
+            <div class="slider-item superHero2" data-href="#"></div>
+            <div class="slider-item superHero3" data-href="#"></div>
+            <div class="slider-item superHero4" data-href="#"></div>
+            <div class="slider-item superHero5" data-href="#"></div>
+            <div class="slider-item superHero6" data-href="#"></div>
+            <div class="slider-item superHero7" data-href="#"></div>
+          </div>
+        </section>
+        <a href="./gallery.html" id="gallery-btn"><button>Explore Our Gallery</button></a>
       </section>
-      <section class="contact" id="contact">
+      <section class="contact">
         <img src="./images/gemstone-hero.jpg" alt="" />
-        <div class="contact-form">
+        <div class="contact-form" id="contact-form">
           <h2>Contact Us</h2>
-          <form action="" method="post">
+          <form id="whatsapp-form">
             <div class="form-group">
               <label for="name"
                 >Name:
@@ -138,6 +151,12 @@
               <label for="email"
                 >Email:
                 <input type="email" id="email" name="email" required />
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="tel"
+                >Phone Number:
+                <input type="tel" id="tel" name="tel" required />
               </label>
             </div>
             <div class="form-group">
@@ -161,6 +180,8 @@
         <a href="#">Our Works</a>
       </nav>
       <a href="./carousel.html">carousel</a>
+      <a href="./carousel2.html">carousel2</a>
+      <a href="./expo.html">expo</a>
       <p>&copy; 2023 Mahwe Marketing. All rights reserved.</p>
     </footer>
   </body>

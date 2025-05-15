@@ -3,23 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery | Mahwe Marketing</title>
+    <meta name="author" content="Panashe Gonese" />
+    <meta
+      name="description"
+      content="Mahwe - A simple and elegant web application"
+    />
+    <meta name="keywords" content="Mahwe, web application, simple, elegant" />
     <link rel="stylesheet" href="./styles/base.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/micro-slider@1.1.0/dist/micro-slider.min.js"
+      defer
+    ></script>
+    <script src="./scripts/carousel2.js" defer></script>
     <script src="./scripts/home.js" defer></script>
+    <title>Mahwe - Home</title>
   </head>
   <body>
     <header id="main-header" class="header">
-      <div class="logo">
         <a href="./index.html"
-          ><img src="./images/Mahwe Marketing Logo-01-01-1.svg" alt=""
+          ><img src="./images/mahwe-light.jpg" alt="" class="logo"
         /></a>
-      </div>
       <nav class="parallelogram">
         <a href="#" id="ham"></a>
-        <a href="#">Who We Are</a>
-        <a href="#">What We Do</a>
-        <a href="#">Our Works</a>
+        <a href="./about.html">Who We Are</a>
+        <a href="./about.html">What We Do</a>
+        <a href="./about.html">Our Works</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./expo.html">Our Expo</a>
       </nav>
     </header>
     <main>
@@ -33,9 +47,10 @@
 
       <section class="gallery-filter" data-aos="fade-up">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="stones">Precious Stones</button>
-        <button class="filter-btn" data-filter="metals">Metals</button>
-        <button class="filter-btn" data-filter="jewelry">Jewelry</button>
+        <button class="filter-btn" data-filter="stones">
+          Semi-Precious Gemstones
+        </button>
+        <button class="filter-btn" data-filter="wood">Petrified Wood</button>
       </section>
 
       <section class="gallery-grid">
@@ -43,7 +58,7 @@
           <img src="./images/gemstone-hero.jpg" alt="Diamond" loading="lazy" />
           <div class="caption">Brilliant Cut Diamond</div>
         </div>
-        <div class="gallery-item" data-category="metals" data-aos="zoom-in">
+        <div class="gallery-item" data-category="wood" data-aos="zoom-in">
           <img src="./images/gemstone-hero.jpg" alt="Gold Ore" loading="lazy" />
           <div class="caption">Raw Gold Ore</div>
         </div>
@@ -55,7 +70,7 @@
           <img src="./images/gemstone-hero.jpg" alt="Diamond" loading="lazy" />
           <div class="caption">Brilliant Cut Diamond</div>
         </div>
-        <div class="gallery-item" data-category="metals" data-aos="zoom-in">
+        <div class="gallery-item" data-category="wood" data-aos="zoom-in">
           <img src="./images/gemstone-hero.jpg" alt="Gold Ore" loading="lazy" />
           <div class="caption">Raw Gold Ore</div>
         </div>
@@ -67,7 +82,7 @@
           <img src="./images/gemstone-hero.jpg" alt="Diamond" loading="lazy" />
           <div class="caption">Brilliant Cut Diamond</div>
         </div>
-        <div class="gallery-item" data-category="metals" data-aos="zoom-in">
+        <div class="gallery-item" data-category="wood" data-aos="zoom-in">
           <img src="./images/gemstone-hero.jpg" alt="Gold Ore" loading="lazy" />
           <div class="caption">Raw Gold Ore</div>
         </div>
@@ -79,7 +94,7 @@
           <img src="./images/gemstone-hero.jpg" alt="Diamond" loading="lazy" />
           <div class="caption">Brilliant Cut Diamond</div>
         </div>
-        <div class="gallery-item" data-category="metals" data-aos="zoom-in">
+        <div class="gallery-item" data-category="wood" data-aos="zoom-in">
           <img src="./images/gemstone-hero.jpg" alt="Gold Ore" loading="lazy" />
           <div class="caption">Raw Gold Ore</div>
         </div>
@@ -91,7 +106,7 @@
           <img src="./images/gemstone-hero.jpg" alt="Diamond" loading="lazy" />
           <div class="caption">Brilliant Cut Diamond</div>
         </div>
-        <div class="gallery-item" data-category="metals" data-aos="zoom-in">
+        <div class="gallery-item" data-category="wood" data-aos="zoom-in">
           <img src="./images/gemstone-hero.jpg" alt="Gold Ore" loading="lazy" />
           <div class="caption">Raw Gold Ore</div>
         </div>
@@ -103,7 +118,7 @@
           <img src="./images/gemstone-hero.jpg" alt="Diamond" loading="lazy" />
           <div class="caption">Brilliant Cut Diamond</div>
         </div>
-        <div class="gallery-item" data-category="metals" data-aos="zoom-in">
+        <div class="gallery-item" data-category="wood" data-aos="zoom-in">
           <img src="./images/gemstone-hero.jpg" alt="Gold Ore" loading="lazy" />
           <div class="caption">Raw Gold Ore</div>
         </div>
@@ -115,7 +130,7 @@
           <img src="./images/gemstone-hero.jpg" alt="Diamond" loading="lazy" />
           <div class="caption">Brilliant Cut Diamond</div>
         </div>
-        <div class="gallery-item" data-category="metals" data-aos="zoom-in">
+        <div class="gallery-item" data-category="wood" data-aos="zoom-in">
           <img src="./images/gemstone-hero.jpg" alt="Gold Ore" loading="lazy" />
           <div class="caption">Raw Gold Ore</div>
         </div>
@@ -127,7 +142,7 @@
           <img src="./images/gemstone-hero.jpg" alt="Diamond" loading="lazy" />
           <div class="caption">Brilliant Cut Diamond</div>
         </div>
-        <div class="gallery-item" data-category="metals" data-aos="zoom-in">
+        <div class="gallery-item" data-category="wood" data-aos="zoom-in">
           <img src="./images/gemstone-hero.jpg" alt="Gold Ore" loading="lazy" />
           <div class="caption">Raw Gold Ore</div>
         </div>
