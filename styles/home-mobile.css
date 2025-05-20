@@ -1,0 +1,31 @@
+/* Base styles for the application */
+:root {
+  --background-color: #f4f4f4;
+  --background-color2: #bdbdbd;
+  --primary-color: #0c1e29;
+  --secondary-dark: #1b2f3d;
+  --accent-gold: #e7b06c;
+  --highlight: #dab176;
+  --background: #132733;
+  --text-color: #a1a1a1;
+  --text-color2: #333;
+}
+@media screen and (max-width: 500px) {
+  /* main content */
+  main {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .serices {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  #main-services, #service-hook {
+    grid-column: 1/2;
+    width: 80vw;
+    border-radius: 10px;
+  }
+}
