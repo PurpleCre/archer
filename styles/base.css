@@ -1,5 +1,25 @@
 /* Base styles for the application */
 :root {
+  /* CSS HEX */
+  --federal-blue: #03045eff;  /* primary: header, footer, nav backgrounds, section dividers, modal overlay*/
+  --honolulu-blue: #0077b6ff; /* secondary: cta,section headers, hover effects, icons */
+  --pacific-cyan: #00b4d8ff; /* accent: secondary btns, features, higlights, interactive UI */
+  --non-photo-blue: #90e0efff; /* card-bg: backgroud for cards, feature blocks, info blocks, input fields, light hover states  */
+  --light-cyan: #caf0f8ff; /* background: main background, Subtle separators or background color for testimonials, client logos, or light sections */
+  --grad: linear-gradient(to right, var(--federal-blue), var(--honolulu-blue)); /* bacgorund color for CTA and hero banners or overlays */
+  --btn: var(--honolulu-blue); /* button color */
+  --btn-hover: var(--pacific-cyan); /* button hover color */
+  --text-color: var(--federal-blue); /* primary text color */
+  --text-color2: var(--honolulu-blue); /* secondary text color */
+
+  /* ----------------------------- */
+  /* archer styles */
+  --background: var(--light-cyan);
+  --card-bg: var(--non-photo-blue);
+  --primary: var(--federal-blue);
+  --secondary: var(--honolulu-blue);
+  --accent: var(--pacific-cyan);
+/*   
   --background-color: #f4f4f4;
   --background-color2: #bdbdbd;
   --primary-color: #0c1e29;
@@ -8,7 +28,7 @@
   --highlight: #dab176;
   --background: #132733;
   --text-color: #a1a1a1;
-  --text-color2: #333;
+  --text-color2: #333; */
 }
 
 /* Global styles */
@@ -30,9 +50,8 @@ body {
   margin: 0 auto;
   padding: 0;
   color: var(--text-color);
-  background-image: linear-gradient(to right, #00416a, #e4e6e5);
+  background-color: var(--background);
   scroll-behavior: smooth;
-  scroll-behavior: ;
 }
 
 a {
@@ -51,19 +70,19 @@ a {
   transition: all 0.8s ease;
   z-index: 999;
   font-size: 30px;
+  background: var(--primary);
 }
 
 .logo {
   width: 120px;
   height: auto;
   margin-bottom: 20px;
-  /* filter: drop-shadow(0 0 50px var(--accent-gold)); */
 }
 
 .parallelogram {
   width: 100%;
   /* height: 150px; */
-  background-color: var(--background-color);
+  background-color: var(--accent);
   clip-path: polygon(
     10% 0,
     /* top-left */ 100% 0,
@@ -85,14 +104,18 @@ nav {
   padding: 10px 8px 10px 60px;
 }
 
+nav a {
+  color: var(--text-color2);
+}
+
 nav a:hover {
-  color: var(--highlight);
-  border-bottom: 2px solid var(--highlight);
+  color: var(--secondary);
+  border-bottom: 2px solid var(--secondary);
 }
 
 header .active {
   color: var(--text-color2);
-  border-bottom: 4px solid var(--highlight);
+  border-bottom: 4px solid var(--secondary);
 }
 
 /* hamburger */
@@ -102,7 +125,7 @@ header .active {
 
 /* triggered on scroll: start*/
 .scroll {
-  background-color: var(--background-color);
+  background-color: var(--background);
 }
 
 /* Light theme after scroll */
@@ -139,9 +162,67 @@ header .active {
 /* Footer */
 footer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 4fr 1fr ;
   padding: 20px 30px 20px 30px;
-  background: var(--background);
+  background: var(--primary);
+  color: var(--text-color);
+  place-items: center;
+  gap: 20px;
+  border-top: 2px solid var(--primary);
+}
+
+footer a {
+  color: var(--text-color);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  gap: 7rem;
+}
+
+#footer-logo {
+  width: 180px;
+  height: auto;
+}
+.footer-social img {
+  width: 100%;
+  height: auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+}
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.footer-info h2 {
+  border-bottom: 3px solid var(--accent);
+  width: 130px;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  line-height: 30px;
+}
+
+.links a:hover {
+  border-bottom: 2px solid var(--accent);
 }
 
 /* Animations */
@@ -149,7 +230,7 @@ footer {
 /* Write letter by letter animation: buggy */
 .typewriter {
   overflow: hidden;
-  border-right: 2px solid #e7b06c;
+  border-right: 2px solid var(--accent);
   white-space: nowrap;
   letter-spacing: 2px;
   animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
@@ -235,17 +316,6 @@ footer {
 /* media queries */
 
 /* Base styles for the application */
-:root {
-  --background-color: #f4f4f4;
-  --background-color2: #bdbdbd;
-  --primary-color: #0c1e29;
-  --secondary-dark: #1b2f3d;
-  --accent-gold: #e7b06c;
-  --highlight: #dab176;
-  --background: #132733;
-  --text-color: #a1a1a1;
-  --text-color2: #333;
-}
 @media screen and (max-width: 500px) {
   body {
     max-width: 500px;

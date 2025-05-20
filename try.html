@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Archer Corporation</title>
+  <style>
+    :root {
+      --federal-blue: #03045eff;
+      --honolulu-blue: #0077b6ff;
+      --pacific-cyan: #00b4d8ff;
+      --non-photo-blue: #90e0efff;
+      --light-cyan: #caf0f8ff;
+
+      --text-dark: #1e1e1e;
+      --text-light: #ffffff;
+      --border-radius: 8px;
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      background-color: var(--light-cyan);
+      color: var(--text-dark);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--federal-blue);
+      color: var(--text-light);
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.75rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: var(--light-cyan);
+      margin-right: 1rem;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--pacific-cyan);
+    }
+
+    .btn-primary {
+      background-color: var(--honolulu-blue);
+      color: var(--text-light);
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--pacific-cyan);
+    }
+
+    .hero.home {
+      background: linear-gradient(135deg, var(--federal-blue), var(--honolulu-blue));
+      color: var(--text-light);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero.home h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero.home h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--pacific-cyan);
+    }
+
+    .hero.home p {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+
+    .section {
+      background-color: var(--non-photo-blue);
+      padding: 3rem 2rem;
+      border-radius: var(--border-radius);
+      max-width: 960px;
+      margin: 3rem auto;
+    }
+
+    .section h2, .section h3, .section h4 {
+      color: var(--federal-blue);
+      margin-top: 1.5rem;
+    }
+
+    .section ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-section input, .contact-section textarea {
+      padding: 0.75rem;
+      border: 1px solid var(--honolulu-blue);
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    .contact-section textarea {
+      min-height: 150px;
+    }
+
+    .contact-section .contact-info {
+      margin-top: 2rem;
+    }
+
+    footer {
+      background-color: var(--federal-blue);
+      color: var(--light-cyan);
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Archer Corporation</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero home" id="home">
+    <h1>Welcome to Archer Corporation</h1>
+    <h2>Your Vision, Your Future</h2>
+    <p>
+      At Archer Corporation, our Construction Division is dedicated to turning your vision into a reality. 
+      With a dynamic team of experienced professionals, we're here to deliver exceptional construction services 
+      that meet and exceed your expectations. Whether it's commercial development, residential transformation, 
+      or community-building, we bring your dreams to life.
+    </p>
+    <a href="#contact" class="btn-primary">Contact Us Today</a>
+  </section>
+
+  <section class="section about" id="about">
+    <h2>About Archer Corporation</h2>
+    
+    <h3>Our Mission</h3>
+    <p>
+      Provide innovative construction solutions that meet the unique needs of our clients. 
+      We pride ourselves on our commitment to quality, safety, and customer satisfaction. 
+      Our team is driven by a passion for building and a dedication to delivering projects 
+      that stand the test of time—from one generation to the next.
+    </p>
+
+    <h3>Our Expertise</h3>
+    <ul>
+      <li><strong>Residential Construction:</strong> From single-family homes to multi-unit developments, we build homes that are both beautiful and functional.</li>
+      <li><strong>Commercial Building:</strong> We construct a wide range of properties including offices, retail centers, hospitality, and industrial projects.</li>
+      <li><strong>Land Development:</strong> We handle site planning, infrastructure development, and zoning/permitting to build thriving communities.</li>
+    </ul>
+
+    <h4>Commercial Building Includes:</h4>
+    <ul>
+      <li>Office buildings and business parks</li>
+      <li>Retail centers and shopping malls</li>
+      <li>Hotels and resorts</li>
+      <li>Industrial facilities and warehouses</li>
+    </ul>
+
+    <h4>Land Development Capabilities:</h4>
+    <ul>
+      <li>Site planning and design</li>
+      <li>Infrastructure: roads, utilities, drainage</li>
+      <li>Entitlement: zoning, permitting, and compliance</li>
+    </ul>
+
+    <h3>Why Choose Us?</h3>
+    <ul>
+      <li><strong>Experienced Team:</strong> Deep industry knowledge with a successful project track record.</li>
+      <li><strong>Personalized Service:</strong> Solutions tailored to your unique goals and vision.</li>
+      <li><strong>Quality Focus:</strong> Committed to construction excellence and long-lasting results.</li>
+    </ul>
+
+    <p>
+      <strong>Let’s Build Your Future Together</strong><br>
+      If you're looking for a reliable and experienced construction partner to bring your vision to life, look no further than Archer Corporation.
+      <br><br>
+      <a href="#contact" class="btn-primary">Learn More & Get Started</a>
+    </p>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Reach out to discuss your project, ask questions, or schedule a consultation.</p>
+
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <textarea name="message" placeholder="Tell us about your project or inquiry..." required></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Our Office</h3>
+      <p>
+        Archer Corporation<br>
+        123 Builder's Way<br>
+        Harare, Zimbabwe<br>
+        <strong>Phone:</strong> +263 77 123 4567<br>
+        <strong>Email:</strong> info@archercorp.co.zw
+      </p>
+      <h4>Business Hours</h4>
+      <p>
+        Monday – Friday: 8:00 AM – 5:00 PM<br>
+        Saturday: 9:00 AM – 1:00 PM<br>
+        Sunday: Closed
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Archer Corporation. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -10,13 +10,13 @@ window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
   // Add light theme if scrolled down 50px
-  if (currentScroll > 50) {
-    header.classList.add("scrolled");
-    logo.src = "./images/mahwe-dark.jpg";
-  } else {
-    header.classList.remove("scrolled");
-    logo.src = "./images/mahwe-light.jpg";
-  }
+  // if (currentScroll > 50) {
+  //   header.classList.add("scrolled");
+  //   logo.src = "./images/mahwe-dark.jpg";
+  // } else {
+  //   header.classList.remove("scrolled");
+  //   logo.src = "./images/mahwe-light.jpg";
+  // }
 
   // Hide on scroll down, show on scroll up
   if (currentScroll > lastScroll && currentScroll > 100) {
