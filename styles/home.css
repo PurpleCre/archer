@@ -1,5 +1,25 @@
 /* Base styles for the application */
 :root {
+  /* CSS HEX */
+  --federal-blue: #03045eff;  /* primary: header, footer, nav backgrounds, section dividers, modal overlay*/
+  --honolulu-blue: #0077b6ff; /* secondary: cta,section headers, hover effects, icons */
+  --pacific-cyan: #00b4d8ff; /* accent: secondary btns, features, higlights, interactive UI */
+  --non-photo-blue: #90e0efff; /* card-bg: backgroud for cards, feature blocks, info blocks, input fields, light hover states  */
+  --light-cyan: #caf0f8ff; /* background: main background, Subtle separators or background color for testimonials, client logos, or light sections */
+  --grad: linear-gradient(to right, var(--federal-blue), var(--honolulu-blue)); /* bacgorund color for CTA and hero banners or overlays */
+  --btn: var(--honolulu-blue); /* button color */
+  --btn-hover: var(--pacific-cyan); /* button hover color */
+  --text-color: var(--federal-blue); /* primary text color */
+  --text-color2: var(--honolulu-blue); /* secondary text color */
+
+  /* ----------------------------- */
+  /* archer styles */
+  --background: var(--light-cyan);
+  --card-bg: var(--non-photo-blue);
+  --primary: var(--federal-blue);
+  --secondary: var(--honolulu-blue);
+  --accent: var(--pacific-cyan);
+/*   
   --background-color: #f4f4f4;
   --background-color2: #bdbdbd;
   --primary-color: #0c1e29;
@@ -8,7 +28,7 @@
   --highlight: #dab176;
   --background: #132733;
   --text-color: #a1a1a1;
-  --text-color2: #333;
+  --text-color2: #333; */
 }
 
 /* Main content */
@@ -38,7 +58,7 @@
   background: linear-gradient(
     to bottom,
     rgba(12, 30, 41, 0.8),
-    rgba(12, 30, 41, 0.2)
+    rgba(21, 28, 32, 0.2)
   );
   z-index: 1;
 }
@@ -52,7 +72,7 @@
 .hero h1 {
   position: relative;
   z-index: 2;
-  color: var(--accent-gold);
+  color: var(--accent);
   font-size: 3em;
   text-align: center;
   opacity: 0;
@@ -67,8 +87,8 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: var(--background-color);
-  color: var(--text-color2);
+  background-color: var(--background);
+  color: var(--text-color);
 }
 
 /* Services Section */
@@ -85,7 +105,7 @@
 
 /* sercives card */
 .card {
-  background-color: var(--background-color);
+  background-color: var(--primary);
   width: 60vw;
   padding: 20px;
   margin: 10px 0;
@@ -124,7 +144,7 @@
   justify-content: center;
   padding: 30px 10px;
   gap: 20px;
-  background-color: var(--background-color);
+  background-color: var(--background);
 }
 
 .about-div {
@@ -167,23 +187,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-color);
+  background-color: var(--card-bg);
   border-radius: 20px;
   height: 340px;
   width: 350px;
   padding: 20px;
+  color: var(--text-color2);
   box-shadow: 0 2px 5px rgba(32, 32, 32, 0.1);
 }
 
 .about-div h3 {
-  color: var(--text-color);
   font-size: 1.5em;
   text-align: center;
 }
 
 /* button */
 button {
-  background-image: linear-gradient(var(--accent-gold), rgb(255, 115, 0));
+  background: var(--btn);
   color: var(--text-color2);
   border: none;
   padding: 10px 20px;
@@ -192,8 +212,8 @@ button {
   font-size: 1em;
 }
 
-#contact button:hover {
-  background-image: linear-gradient(rgb(243, 23, 12), rgb(253, 114, 0));
+#contact:hover {
+  background: var(--btn-hover);
   color: var(--text-color2);
   transform: scale3d(1.05, 1.05, 1);
 }
@@ -211,6 +231,7 @@ button {
 #Carousel-slider {
   position: relative;
   padding-bottom: 40px;
+  background: var(--secondary);
 }
 
 .carousel-container {
@@ -230,18 +251,19 @@ button {
 .carousel-container a {
   margin: 20px 10px;
 }
-#gallery-btn {
+#gallery-btn button{
   position: absolute;
   bottom: 20px;
   left: 45%;
   margin: 20px 10px;
   text-align: center;
   width: 200px;
-
+  background: var(--primary);
+  color: var(--accent)
 }
 
 #gallery-btn button:hover {
-  background-image: linear-gradient(rgb(243, 23, 12), rgb(253, 114, 0));
+  background: var(--btn-hover);
   color: var(--text-color2);
   transform: scale3d(1.05, 1.05, 1);
 }
@@ -249,7 +271,7 @@ button {
 .Carousel-slider a,
 .Carousel-slider a:link,
 .Carousel-slider a:visited {
-  color: #212121;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -287,7 +309,7 @@ button {
   top: 0;
   width: 320px;
   cursor: pointer;
-  border: 5px solid #ffc107;
+  border: 5px solid var(--accent);
 }
 
 .indicators {
@@ -300,7 +322,7 @@ button {
 }
 
 .indicators li {
-  color: #255f8b;
+  color: var(--secondary);
   float: left;
   height: 16px;
   margin-right: 8px;
@@ -312,7 +334,7 @@ button {
   margin: 0;
 }
 .indicators a {
-  background: #00416a;
+  background: var(--background);
   border-radius: 8px;
   display: inline-block;
   height: 16px;
@@ -320,7 +342,7 @@ button {
 }
 
 .indicators .active a {
-  background: #e4e5e6;
+  background: var(--accent);
 }
 
 .superHero1 {
@@ -358,7 +380,7 @@ button {
   align-items: center;
   padding: 30px 10px;
   gap: 20px;
-  background-color: var(--primary-color);
+  background-color: var(--background);
 }
 
 .contact img {
@@ -375,7 +397,7 @@ button {
   position: absolute;
   top: 60px;
   left: 60vw;
-  background-color: var(--background-color);
+  background-color: var(--secondary);
   margin: 1rem 2%;
   padding: 20px;
   display: grid;
