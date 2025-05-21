@@ -1,16 +1,25 @@
 /* Base styles for the application */
 :root {
   /* CSS HEX */
-  --federal-blue: #03045eff;  /* primary: header, footer, nav backgrounds, section dividers, modal overlay*/
+  --federal-blue: #03045eff; /* primary: header, footer, nav backgrounds, section dividers, modal overlay*/
   --honolulu-blue: #0077b6ff; /* secondary: cta,section headers, hover effects, icons */
   --pacific-cyan: #00b4d8ff; /* accent: secondary btns, features, higlights, interactive UI */
   --non-photo-blue: #90e0efff; /* card-bg: backgroud for cards, feature blocks, info blocks, input fields, light hover states  */
   --light-cyan: #caf0f8ff; /* background: main background, Subtle separators or background color for testimonials, client logos, or light sections */
-  --grad: linear-gradient(to right, var(--federal-blue), var(--honolulu-blue)); /* bacgorund color for CTA and hero banners or overlays */
+  --grad: linear-gradient(
+    135deg,
+    var(--federal-blue),
+    var(--honolulu-blue)
+  ); /* bacgorund color for CTA and hero banners or overlays */
   --btn: var(--honolulu-blue); /* button color */
   --btn-hover: var(--pacific-cyan); /* button hover color */
   --text-color: var(--federal-blue); /* primary text color */
   --text-color2: var(--honolulu-blue); /* secondary text color */
+  --light-cyan: #caf0f8ff;
+  --text-dark: #1e1e1e;
+  --text-light: #ffffff;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
 
   /* ----------------------------- */
   /* archer styles */
@@ -19,7 +28,7 @@
   --primary: var(--federal-blue);
   --secondary: var(--honolulu-blue);
   --accent: var(--pacific-cyan);
-/*   
+  /*   
   --background-color: #f4f4f4;
   --background-color2: #bdbdbd;
   --primary-color: #0c1e29;
@@ -46,11 +55,12 @@ html:focus-within {
 }
 body {
   width: 100%;
-  font-family: Arial, sans-serif;
-  margin: 0 auto;
+  background-color: var(--light-cyan);
+  color: var(--text-dark);
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
   padding: 0;
-  color: var(--text-color);
-  background-color: var(--background);
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
@@ -162,7 +172,7 @@ header .active {
 /* Footer */
 footer {
   display: grid;
-  grid-template-rows: 4fr 1fr ;
+  grid-template-rows: 4fr 1fr;
   padding: 20px 30px 20px 30px;
   background: var(--primary);
   color: var(--text-color);
@@ -211,6 +221,19 @@ footer a {
 .footer-info h2 {
   border-bottom: 3px solid var(--accent);
   width: 130px;
+}
+
+#contact-info {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contact h3 {
+  margin: 0;
+  padding: 0;
 }
 .links {
   display: flex;
