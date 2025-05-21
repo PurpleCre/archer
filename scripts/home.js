@@ -27,6 +27,33 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// changing hero text
+const texts = [
+      "Your Vision, Our Expertise",
+      "Innovating the Future of Construction",
+      "Quality You Can Build On",
+      "Turning Ideas Into Landmarks",
+      "From Concept to Concrete — We Build the Future",
+      "Shaping Land, Raising Standards",
+      "Design. Develop. Deliver",
+      "Trusted Builders of Tomorrow’s Communities",
+      "Driven by Vision. Built with Integrity",
+      "Construction with Purpose, Precision, and Pride",
+      "Elevating Architecture, Empowering Ambition",
+      "Your Future, Engineered Today"
+    ];
+
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % texts.length;
+      title.style.opacity = 0;
+      setTimeout(() => {
+        title.textContent = texts[index];
+        title.style.opacity = 1;
+      }, 500);
+    }, 4000); // Change text every 3 seconds
+
 // image carousel
 document.addEventListener("DOMContentLoaded", () => {
   // ----- Slider Begin
