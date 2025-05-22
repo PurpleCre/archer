@@ -1,14 +1,33 @@
 /* Base styles for the application */
 :root {
-  --background-color: #f4f4f4;
-  --background-color2: #bdbdbd;
-  --primary-color: #0c1e29;
-  --secondary-dark: #1b2f3d;
-  --accent-gold: #e7b06c;
-  --highlight: #dab176;
-  --background: #132733;
-  --text-color: #a1a1a1;
-  --text-color2: #333;
+  /* CSS HEX */
+  --federal-blue: #03045eff; /* primary: header, footer, nav backgrounds, section dividers, modal overlay*/
+  --honolulu-blue: #0077b6ff; /* secondary: cta,section headers, hover effects, icons */
+  --pacific-cyan: #00b4d8ff; /* accent: secondary btns, features, higlights, interactive UI */
+  --non-photo-blue: #90e0efff; /* card-bg: backgroud for cards, feature blocks, info blocks, input fields, light hover states  */
+  --light-cyan: #caf0f8ff; /* background: main background, Subtle separators or background color for testimonials, client logos, or light sections */
+  --grad: linear-gradient(
+    135deg,
+    var(--federal-blue),
+    var(--honolulu-blue)
+  ); /* bacgorund color for CTA and hero banners or overlays */
+  --btn: var(--honolulu-blue); /* button color */
+  --btn-hover: var(--pacific-cyan); /* button hover color */
+  --text-color: var(--federal-blue); /* primary text color */
+  --text-color2: var(--honolulu-blue); /* secondary text color */
+  --light-cyan: #caf0f8ff;
+  --text-dark: #1e1e1e;
+  --text-light: #ffffff;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+
+  /* ----------------------------- */
+  /* archer styles */
+  --background: var(--light-cyan);
+  --card-bg: var(--non-photo-blue);
+  --primary: var(--federal-blue);
+  --secondary: var(--honolulu-blue);
+  --accent: var(--pacific-cyan);
 }
 
 /* Show case Page */
@@ -23,11 +42,11 @@
 .gallery-header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: #e7b06c;
+  color: var(--accent);
 }
 
 .gallery-header p {
-  color: #ccc;
+  color: var(--text-color);
   font-size: 1.1rem;
 }
 
@@ -42,8 +61,8 @@
 .gallery-filter button {
   padding: 0.6rem 1.2rem;
   background: transparent;
-  color: #fff;
-  border: 1px solid #e7b06c;
+  color: var(--text-color);
+  border: 1px solid var(--accent);
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
@@ -51,8 +70,8 @@
 
 .gallery-filter button:hover,
 .gallery-filter button.active {
-  background: #e7b06c;
-  color: #0c1e29;
+  background: var(--secondary);
+  color: var(--text-light);
 }
 
 .gallery-grid {
@@ -84,15 +103,13 @@
 .caption {
   position: absolute;
   bottom: 0;
-  background: rgba(12, 30, 41, 0.75);
-  color: #fff;
+  background: var(--primary);
+  color: var(--text-light);
   width: 100%;
   padding: 0.75rem;
   font-size: 0.95rem;
   text-align: center;
 }
-
-/* ... previous styles from earlier response ... */
 
 /* Lightbox Modal */
 .lightbox {
@@ -117,7 +134,7 @@
 }
 
 .lightbox-caption {
-  color: #fff;
+  color: var(--text-light);
   font-size: 1.1rem;
 }
 
@@ -126,7 +143,7 @@
   top: 20px;
   right: 30px;
   font-size: 2rem;
-  color: white;
+  color: var(--text-light);
   cursor: pointer;
 }
 

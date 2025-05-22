@@ -122,7 +122,7 @@ document
     const name = document.getElementById("name").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    const phoneNumber = "263776583517"; // e.g., 263771234567 (no + sign)
+    const phoneNumber = "263789177726"; // e.g., 263771234567 (no + sign)
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       `Hello, my name is ${name}. ${message}`
