@@ -29,89 +29,86 @@ window.addEventListener("scroll", () => {
 
 // changing hero text
 const texts = [
-      "Your Vision, Our Expertise",
-      "Innovating the Future of Construction",
-      "Quality You Can Build On",
-      "Turning Ideas Into Landmarks",
-      "From Concept to Concrete — We Build the Future",
-      "Shaping Land, Raising Standards",
-      "Design. Develop. Deliver",
-      "Trusted Builders of Tomorrow’s Communities",
-      "Driven by Vision. Built with Integrity",
-      "Construction with Purpose, Precision, and Pride",
-      "Elevating Architecture, Empowering Ambition",
-      "Your Future, Engineered Today"
-    ];
+  "Your Vision, Our Expertise",
+  "Innovating the Future of Construction",
+  "Quality You Can Build On",
+  "Turning Ideas Into Landmarks",
+  "From Concept to Concrete — We Build the Future",
+  "Shaping Land, Raising Standards",
+  "Design. Develop. Deliver",
+  "Trusted Builders of Tomorrow’s Communities",
+  "Driven by Vision. Built with Integrity",
+  "Construction with Purpose, Precision, and Pride",
+  "Elevating Architecture, Empowering Ambition",
+  "Your Future, Engineered Today",
+];
 
-    let index = 0;
+let index = 0;
 
-    setInterval(() => {
-      index = (index + 1) % texts.length;
-      title.style.opacity = 0;
-      setTimeout(() => {
-        title.textContent = texts[index];
-        title.style.opacity = 1;
-      }, 500);
-    }, 4000); // Change text every 3 seconds
+setInterval(() => {
+  index = (index + 1) % texts.length;
+  title.style.opacity = 0;
+  setTimeout(() => {
+    title.textContent = texts[index];
+    title.style.opacity = 1;
+  }, 500);
+}, 4000); // Change text every 3 seconds
 
-// image carousel
-document.addEventListener("DOMContentLoaded", () => {
-  // ----- Slider Begin
-  const CaroS = document.querySelector(".Carousel-slider");
-  const CaroSlider = new MicroSlider(CaroS, {
-    indicators: true,
-    indicatorText: "",
-  });
-  const hammer = new Hammer(CaroS);
-  const CaroSTimer = 2000;
-  let CaroAutoplay = setInterval(() => CaroSlider.next(), CaroSTimer);
+let currentSlide = 0;
+const carousel = document.querySelector(".carousel");
+const images = document.querySelectorAll(".carousel img");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const dotsContainer = document.querySelector(".dots-container");
 
-  //  ------ Mouseenter Event
-  CaroS.onmouseenter = function (e) {
-    clearInterval(CaroAutoplay);
-    console.log(e.type + "mouse detected");
-  };
+images[currentSlide].classList.add("active");
 
-  //  ------ Mouseleave Event
-  CaroS.onmouseleave = function (e) {
-    clearInterval(CaroAutoplay);
-    CaroAutoplay = setInterval(() => CaroSlider.next(), CaroSTimer);
-    console.log(e.type + "mouse detected");
-  };
-
-  //  ------ Mouseclick Event
-  CaroS.onclick = function (e) {
-    clearInterval(CaroAutoplay);
-    console.log(e.type + "mouse detected");
-  };
-
-  //  ------ Gesture Tap Event
-  hammer.on("tap", function (e) {
-    clearInterval(CaroAutoplay);
-    console.log(e.type + "gesture detected");
-  });
-
-  //  ------ Gesture Swipe Event
-  hammer.on("swipe", function (e) {
-    clearInterval(CaroAutoplay);
-    CaroAutoplay = setInterval(() => CaroSlider.next(), CaroSTimer);
-    console.log(e.type + "gesture detected");
-  });
-
-  let slideLink = document.querySelectorAll(".slide-item");
-  if (slideLink && slideLink !== null && slideLink.length > 0) {
-    slideLink.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        let href = link.dataset.href;
-        const target = link.dataset.target;
-        if (href !== "#") window.open(href, target);
-      });
-    });
-
-    // ------ Slider End
+// Create dots
+for (let i = 0; i < images.length; i++) {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+  if (i === currentSlide) {
+    dot.classList.add("active");
   }
+  dot.addEventListener("click", () => {
+    currentSlide = i;
+    updateSlide();
+  });
+  dotsContainer.appendChild(dot);
+}
+
+prevBtn.addEventListener("click", () => {
+  currentSlide = (currentSlide - 1 + images.length) % images.length;
+  updateSlide();
 });
+
+nextBtn.addEventListener("click", () => {
+  currentSlide = (currentSlide + 1) % images.length;
+  updateSlide();
+});
+
+function updateSlide() {
+  images.forEach((image, index) => {
+    image.classList.remove("active");
+    if (index === currentSlide) {
+      image.classList.add("active");
+    }
+  });
+
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot, index) => {
+    dot.classList.remove("active");
+    if (index === currentSlide) {
+      dot.classList.add("active");
+    }
+  });
+}
+
+// Auto slide
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % images.length;
+  updateSlide();
+}, 5000);
 
 //  link form to whatsapp
 document
