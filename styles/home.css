@@ -169,7 +169,7 @@
 
 .about-card-right {
   background-color: var(--secondary);
-  color: var(--text-dark);
+  /* color: var(--text-dark); */
   width: 50vw;
   padding: 20px;
   margin: 10px 0;
@@ -371,15 +371,15 @@ button {
   margin: 2rem auto;
   display: block;
   border-radius: 34px;
-  border: 2px var(--primary) solid;
-  /* margin: 40px auto; */
+  /* border: 2px var(--secondary) solid; */
+  box-shadow: -25px 25px 50px #00456a, 25px -25px 50px #00a9ff;
 }
 
 .carousel {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
 .carousel img {
@@ -412,7 +412,7 @@ button {
 
 .prev-btn:hover,
 .next-btn:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 .prev-btn {
   left: -100px;
@@ -497,7 +497,7 @@ button {
 label {
   display: block;
   font-size: 1rem;
-  color: var(--text-color);
+  color: var(--text-light);
   padding-top: 0.2rem;
 }
 

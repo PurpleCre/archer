@@ -27,6 +27,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
+
 // changing hero text
 const texts = [
   "Your Vision, Our Expertise",

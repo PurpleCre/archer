@@ -1,5 +1,34 @@
 /* Base styles for the application */
 :root {
+  /* CSS HEX */
+  --federal-blue: #03045eff; /* primary: header, footer, nav backgrounds, section dividers, modal overlay*/
+  --honolulu-blue: #0077b6ff; /* secondary: cta,section headers, hover effects, icons */
+  --pacific-cyan: #00b4d8ff; /* accent: secondary btns, features, higlights, interactive UI */
+  --non-photo-blue: #90e0efff; /* card-bg: backgroud for cards, feature blocks, info blocks, input fields, light hover states  */
+  --light-cyan: #caf0f8ff; /* background: main background, Subtle separators or background color for testimonials, client logos, or light sections */
+  --grad: linear-gradient(
+    135deg,
+    var(--federal-blue),
+    var(--honolulu-blue)
+  ); /* bacgorund color for CTA and hero banners or overlays */
+  --btn: var(--honolulu-blue); /* button color */
+  --btn-hover: var(--pacific-cyan); /* button hover color */
+  --text-color: var(--federal-blue); /* primary text color */
+  --text-color2: var(--honolulu-blue); /* secondary text color */
+  --light-cyan: #caf0f8ff;
+  --text-dark: #1e1e1e;
+  --text-light: #ffffff;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+
+  /* ----------------------------- */
+  /* archer styles */
+  --background: var(--light-cyan);
+  --card-bg: var(--non-photo-blue);
+  --primary: var(--federal-blue);
+  --secondary: var(--honolulu-blue);
+  --accent: var(--pacific-cyan);
+  /*   
   --background-color: #f4f4f4;
   --background-color2: #bdbdbd;
   --primary-color: #0c1e29;
@@ -8,22 +37,44 @@
   --highlight: #dab176;
   --background: #132733;
   --text-color: #a1a1a1;
-  --text-color2: #333;
+  --text-color2: #333; */
 }
+
 @media screen and (max-width: 500px) {
   /* main content */
   main {
     width: 95%;
     margin: 0 auto;
   }
-  .hero h1 {
+  .hero-img h1 {
     font-size: 2rem;
   }
-  .serices {
+
+  .hero.home {
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px 10px 30px 10px;
+  }
+
+  .about {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+  #helmet {
+    top: 30%;
+    left: 20%;
+    filter: blur(4px);
+  }
+  .about-card-left, .about-card-left {
+    color: var(--text-light);
+  }
+
+  .services {
     grid-template-columns: 1fr;
     place-items: center;
   }
-  #main-services, #service-hook {
+  #main-services,
+  #service-hook {
     grid-column: 1/2;
     width: 80vw;
     border-radius: 10px;

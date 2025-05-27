@@ -1,0 +1,75 @@
+
+<section class="section projects" id="projects">
+  <h2><i class="fas fa-project-diagram"></i> Our Projects</h2>
+  <p>
+    At Archer Corporation, each project is a testament to our commitment to quality, innovation, and precision.
+    From residential developments to complex commercial builds, we bring vision to life with integrity and
+    technical excellence. Explore a selection of our work and see how we’re shaping the built environment —
+    one project at a time.
+  </p>
+
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x250?text=Residential+Build" alt="Residential Project">
+      <h3>Luxury Residential Villas</h3>
+      <p>Modern, eco-friendly villas developed with smart home integration in Harare’s suburbs.</p>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x250?text=Commercial+Center" alt="Commercial Project">
+      <h3>Westgate Business Park</h3>
+      <p>A mixed-use development featuring office spaces, retail outlets, and green public areas.</p>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x250?text=Land+Development" alt="Land Development Project">
+      <h3>Sunridge Community</h3>
+      <p>Full-scale land development project including roads, utilities, and community facilities.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    background-color: var(--non-photo-blue);
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    margin-bottom: 60px;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .project-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .project-card h3 {
+    font-size: 1.4rem;
+    color: var(--honolulu-blue);
+    margin: 16px;
+  }
+
+  .project-card p {
+    margin: 0 16px 20px;
+    font-size: 1rem;
+  }
+</style>
