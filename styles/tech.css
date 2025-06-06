@@ -1,0 +1,306 @@
+/* Base styles for the application */
+:root {
+  /* CSS HEX */
+  --federal-blue: #03045eff; /* primary: header, footer, nav backgrounds, section dividers, modal overlay*/
+  --honolulu-blue: #0077b6ff; /* secondary: cta,section headers, hover effects, icons */
+  --pacific-cyan: #00b4d8ff; /* accent: secondary btns, features, higlights, interactive UI */
+  --non-photo-blue: #90e0efff; /* card-bg: backgroud for cards, feature blocks, info blocks, input fields, light hover states  */
+  --light-cyan: #caf0f8ff; /* background: main background, Subtle separators or background color for testimonials, client logos, or light sections */
+  --grad: linear-gradient(
+    135deg,
+    var(--federal-blue),
+    var(--honolulu-blue)
+  ); /* bacgorund color for CTA and hero banners or overlays */
+  --btn: var(--honolulu-blue); /* button color */
+  --btn-hover: var(--pacific-cyan); /* button hover color */
+  --text-color: var(--federal-blue); /* primary text color */
+  --text-color2: var(--honolulu-blue); /* secondary text color */
+  --light-cyan: #caf0f8ff;
+  --text-dark: #1e1e1e;
+  --text-light: #ffffff;
+  --border-radius: 8px;
+  --btn-radius: 26px;
+  --transition: all 0.3s ease;
+
+  /* ----------------------------- */
+  /* archer styles */
+  --background: var(--light-cyan);
+  --card-bg: var(--non-photo-blue);
+  --primary: var(--federal-blue);
+  --secondary: var(--honolulu-blue);
+  --accent: var(--pacific-cyan);
+}
+
+main {
+  margin: 0 auto;
+  min-height: calc(100vh - 80px); /* Adjust based on header/footer height */
+  padding: 20px;
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.tech-hero {
+  width: 80vw;
+  margin: 50px auto;
+}
+
+.tech-hero h1 {
+  font-size: 48px;
+  line-height: 55px;
+  font-weight: 700;
+}
+
+.tech-hero p {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 10px 0 20px 0;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-light);
+  background-color: var(--btn);
+  border: solid 2px var(--btn);
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-right: 20px;
+}
+
+#tech-btns button:last-of-type {
+  background-color: transparent;
+  color: var(--text-dark);
+}
+
+#tech-btns button:hover,
+button:hover {
+  background-color: var(--btn-hover);
+  border-color: var(--btn-hover);
+}
+
+#display {
+  width: 100%;
+  height: 50vh;
+  .carousel-slide {
+    width: 300%;
+    display: flex;
+    & img {
+      width: calc(100% / 3);
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.tech-call {
+  position: relative;
+}
+/* background for CTA */
+#bg,
+.call {
+  background: var(--grad);
+  width: 75vw;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bg {
+  width: 82vw;
+  height: 290px;
+  transform: rotate(1deg);
+}
+
+.call {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: 5vw;
+  transform: rotate(-1deg);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #0077b6ff;
+  flex-direction: row;
+  padding: 45px;
+  column-gap: 50px;
+  color: var(--text-light);
+  margin-left: 22px;
+}
+
+.call-info,
+#call-btn {
+  transform: rotate(1deg);
+}
+
+.call-info h3 {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+  text-align: left;
+}
+
+.call-info p {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  text-align: left;
+}
+
+#call-btn {
+  width: 180px;
+  height: 30px;
+  border-radius: var(--btn-radius);
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tech-intro-one,
+.tech-intro-two {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 30px;
+  column-gap: 20px;
+}
+
+.item {
+  border-left: 3px solid;
+  padding: 0 0 0 10px;
+}
+
+.item h2 {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.item p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.tech-intro video {
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* discover */
+.discover {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  gap: 40px;
+  padding: 30px;
+}
+
+.disc-info h3 {
+  font-size: 35px;
+  font-weight: 600;
+  /* color: var(--text-color); */
+}
+
+.disc-info p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#disc-btn {
+  justify-self: flex-start;
+  position: sticky;
+  top: 0;
+}
+.disc-steps {
+  padding: 80px 0 0 0;
+}
+
+.step {
+  padding: 5px 20px 20px 20px;
+  width: 480px;
+  height: 200px;
+  margin: 0 0 15px;
+  text-align: center;
+  border-radius: var(--border-radius);
+}
+
+.step h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.step span {
+  transform: translate(-50%, -50%);
+}
+
+.step:nth-child(odd) {
+  background: #00b4d8ff;
+  transform: rotate(-3deg);
+}
+.step:nth-child(even) {
+  background: var(--light-cyan);
+  transform: rotate(3deg);
+}
+
+#laser {
+  text-align: left;
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background: linear-gradient(145deg, #82cad7, #9af0ff);
+  box-shadow: 20px 20px 49px #659da7, -20px -20px 49px #bbffff;
+}
+
+.laser-intro {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+}
+
+/* iframe {
+  width: 200px;
+  height: auto;
+  border: none;
+  border-radius: var(--border-radius);
+} */
+
+#one {
+  width: 780px;
+  height: auto;
+}
