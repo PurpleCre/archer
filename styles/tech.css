@@ -218,8 +218,12 @@ button:hover {
   font-weight: 400;
 }
 
+.disc-btns {
+  position: sticky;
+  top: 0;
+}
 #disc-btn {
-  justify-self: flex-start;
+  /* justify-self: flex-start; */
   position: sticky;
   top: 0;
 }
