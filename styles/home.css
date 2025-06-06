@@ -346,6 +346,48 @@ button {
   font-size: 1em;
 }
 
+/* Tech display and hook */
+.tech-intro {
+  background-color: var(--light-cyan);
+  padding: 30px 40px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.tech-intro h2 {
+  font-size: 2.5rem;
+  color: var(--federal-blue);
+  margin-bottom: 20px;
+}
+
+.tech-intro p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #333;
+}
+
+.tech-intro strong {
+  color: var(--honolulu-blue);
+}
+
+.btn.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--pacific-cyan);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--honolulu-blue);
+}
+
 /* services display */
 
 /* carousel */
