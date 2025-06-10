@@ -1,1 +1,153 @@
-empty
+<section class="section team" id="team">
+  <div class="team-intro">
+    <h2>
+      <i class="fas fa-users"></i> Meet the Team Behind Archer Corporation
+    </h2>
+    <p>
+      At Archer Corporation, our strength lies in our people. From seasoned
+      engineers and project managers to visionary architects and innovative
+      planners, our team brings deep expertise and unwavering dedication to
+      every project. Get to know the professionals who are committed to building
+      your future — one foundation at a time.
+    </p>
+  </div>
+
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="https://via.placeholder.com/200" alt="Team Member" />
+      <h4>Jane Moyo</h4>
+      <p class="role">Director of Operations</p>
+      <p>
+        With over 15 years of experience in construction management, Jane
+        ensures every Archer project meets the highest standards of quality,
+        efficiency, and client satisfaction.
+      </p>
+    </div>
+    <div class="team-member">
+      <img src="https://via.placeholder.com/200" alt="Team Member" />
+      <h4>Simba Chikasha</h4>
+      <p class="role">Lead Architect</p>
+      <p>
+        A master of structural elegance, Simba specializes in designing
+        innovative spaces that balance form, function, and future-forward
+        thinking.
+      </p>
+    </div>
+    <div class="team-member">
+      <img src="https://via.placeholder.com/200" alt="Team Member" />
+      <h4>Linda Tsvakai</h4>
+      <p class="role">Project Manager</p>
+      <p>
+        Linda leads cross-functional teams with precision, keeping timelines on
+        track and clients informed — from blueprint to handover.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    /* CSS HEX */
+    --federal-blue: #03045eff; /* primary: header, footer, nav backgrounds, section dividers, modal overlay*/
+    --honolulu-blue: #0077b6ff; /* secondary: cta,section headers, hover effects, icons */
+    --pacific-cyan: #00b4d8ff; /* accent: secondary btns, features, higlights, interactive UI */
+    --non-photo-blue: #90e0efff; /* card-bg: backgroud for cards, feature blocks, info blocks, input fields, light hover states  */
+    --light-cyan: #caf0f8ff; /* background: main background, Subtle separators or background color for testimonials, client logos, or light sections */
+    --grad: linear-gradient(
+      135deg,
+      var(--federal-blue),
+      var(--honolulu-blue)
+    ); /* bacgorund color for CTA and hero banners or overlays */
+    --btn: var(--honolulu-blue); /* button color */
+    --btn-hover: var(--pacific-cyan); /* button hover color */
+    --text-color: var(--federal-blue); /* primary text color */
+    --text-color2: var(--honolulu-blue); /* secondary text color */
+    --light-cyan: #caf0f8ff;
+    --text-dark: #1e1e1e;
+    --text-light: #ffffff;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+
+    /* ----------------------------- */
+    /* archer styles */
+    --background: var(--light-cyan);
+    --card-bg: var(--non-photo-blue);
+    --primary: var(--federal-blue);
+    --secondary: var(--honolulu-blue);
+    --accent: var(--pacific-cyan);
+    /*   
+  --background-color: #f4f4f4;
+  --background-color2: #bdbdbd;
+  --primary-color: #0c1e29;
+  --secondary-dark: #1b2f3d;
+  --accent-gold: #e7b06c;
+  --highlight: #dab176;
+  --background: #132733;
+  --text-color: #a1a1a1;
+  --text-color2: #333; */
+  }
+  .team {
+    background-color: var(--light-cyan);
+    padding: 60px 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .team-intro h2 {
+    font-size: 2.4rem;
+    color: var(--federal-blue);
+    margin-bottom: 20px;
+  }
+
+  .team-intro p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .team-member {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+
+  .team-member h4 {
+    font-size: 1.2rem;
+    color: var(--honolulu-blue);
+    margin-bottom: 5px;
+  }
+
+  .team-member .role {
+    font-weight: bold;
+    color: var(--pacific-cyan);
+    margin-bottom: 10px;
+  }
+
+  .team-member p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+</style>
