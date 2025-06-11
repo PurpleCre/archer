@@ -192,8 +192,16 @@ button:hover {
 
 .tech-intro video {
   object-fit: cover;
+  width: 500px;
+  aspect-ratio: 16/12;
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(31, 1, 139, 0.2);
+}
+
+#gamazin {
+  width: 90%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(31, 1, 139, 0.2);
 }
 
 /* discover */
