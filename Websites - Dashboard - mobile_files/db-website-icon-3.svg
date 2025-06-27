@@ -1,0 +1,13 @@
+<svg id="Backups_Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_47815" data-name="Rectangle 47815" width="18" height="18" fill="#2a2f30" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Backups_Icon-2" data-name="Backups_Icon" clip-path="url(#clip-path)">
+    <g id="design_system_icons-06" data-name="design system icons-06" transform="translate(1.636 3.273)">
+      <path id="Path_169378" data-name="Path 169378" d="M19.236,22.19h0a4.321,4.321,0,0,0-8.577,0h0a2.759,2.759,0,0,0,0,5.519h3.69l1.23.033h3.69a2.714,2.714,0,0,0,1.928-.831,2.774,2.774,0,0,0-1.961-4.721Z" transform="translate(-7.9 -16.738)" fill="#22b339"/>
+      <path id="Path_169379" data-name="Path 169379" d="M37.215,17.356a1.915,1.915,0,0,0-1.828-1.064h0A3.275,3.275,0,0,0,32.128,13.4a3.191,3.191,0,0,0-1.928.632,5.331,5.331,0,0,1,4.754,3.89,3.72,3.72,0,0,1,2.261,1.529,1.9,1.9,0,0,0,.3-1.064A2.731,2.731,0,0,0,37.215,17.356Z" transform="translate(-22.786 -13.4)" fill="#22b339" opacity="0.5"/>
+    </g>
+  </g>
+</svg>
