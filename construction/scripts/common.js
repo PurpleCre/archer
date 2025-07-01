@@ -1,6 +1,6 @@
 // scroll hooks
 let lastScroll = 0;
-const header = document.getElementById("main-header");
+const header = document.getElementById  ("main-header");
 const logo = document.querySelector(".logo");
 const ham = document.querySelector("#menu");
 const nav = document.querySelector("nav");

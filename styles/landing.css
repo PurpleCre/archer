@@ -53,6 +53,11 @@ header h1 {
   font-size: 1.8rem;
 }
 
+/* hamburger */
+#menu {
+  display: none;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -78,7 +83,7 @@ nav ul li a:hover {
 }
 
 .clear {
-  background-color: rgba(1, 1, 1, .001);
+  background-color: rgba(1, 1, 1, 0.001);
   color: white;
 }
 
@@ -352,92 +357,91 @@ nav ul li a:hover {
 }
 
 .service h3 {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    margin: 0;
-    padding: 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
 }
 
 .service button {
-    background-color: var(--accent-gray);
-    border-color: var(--federal-blue);
-    color: var(--federal-blue);
+  background-color: var(--accent-gray);
+  border-color: var(--federal-blue);
+  color: var(--federal-blue);
 }
 
 .service button:hover {
-    background-color: var(--federal-blue);
-    color: white;
+  background-color: var(--federal-blue);
+  color: white;
 }
 
 /* contact */
 
 #contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  text-align: left;
 }
 
-.map img{
-    max-width: 100%;
-    padding: 0 40px;
+.map img {
+  max-width: 100%;
+  padding: 0 40px;
 }
 
 /* form */
 .form {
-    padding: 0 80px;
+  padding: 0 80px;
 }
 
-.form h2{
-    font-size: 3rem;
-    margin-bottom: 0;
+.form h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
 }
 
 fieldset {
-    border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 20px 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px 0;
 }
 
 label {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    color: grey;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: grey;
 }
 
 label:last-of-type {
-    flex-direction: row;
-    gap: 10px;
-    cursor: pointer
+  flex-direction: row;
+  gap: 10px;
+  cursor: pointer;
 }
 
-input[type=text],
-input[type=email],
-textarea
-{
-    width: 350px;
-    padding: 10px;
-    border-radius: 30px;
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 350px;
+  padding: 10px;
+  border-radius: 30px;
 }
 
 textarea {
-    max-width: 350px;
-    width: 350px;
-    max-height: 200px;
+  max-width: 350px;
+  width: 350px;
+  max-height: 200px;
 }
 
 input[type="submit"] {
-    width: 200px;
-    padding: 12px;
-    border-radius: 40px;
-    background-color: var(--federal-blue);
-    color: white;
-    cursor: pointer;
+  width: 200px;
+  padding: 12px;
+  border-radius: 40px;
+  background-color: var(--federal-blue);
+  color: white;
+  cursor: pointer;
 }
 .cards {
   display: flex;
@@ -497,9 +501,81 @@ a.cta-button:hover {
   background-color: var(--honolulu-blue);
 }
 
+/* media queries */
 @media (max-width: 768px) {
   .cards {
     flex-direction: column;
     align-items: center;
   }
+}
+
+@media screen and (max-width: 500px) {
+  /* header */
+  header {
+    position: relative;
+    padding: 5px 10px 0 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 50px;
+    margin: 5px;
+  }
+
+  /* hamburger */
+  #menu {
+    display: block;
+    position: absolute;
+    top: 5px;
+    text-decoration: none;
+    color: white;
+    right: 100px;
+  }
+  #menu::before {
+    content: "≡";
+    font-size: 4rem;
+    font-weight: 700;
+    padding-right: 0;
+    background-color: inherit;
+    color: var(--card-color);
+  }
+  #menu.show::before {
+    content: "✖";
+    font-size: 3rem;
+  }
+
+  /* nav */
+  nav,
+  #nav-cta {
+    display: none;
+  }
+  nav.show {
+    display: flex;
+    position: relative;
+  }
+  nav.show ul {
+    background-color: var(--federal-blue);
+    position: absolute;
+    top: 40px;
+    left: -380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    transition: all 1s ease-out;
+    width: 100vw;
+  }
+  li {
+    padding-bottom: 20px;
+  }
+  li a{
+    font-size: 70px;
+    width: 100%;
+  }
+}
+/* utility classes */
+.hide {
+  display: none;
 }
