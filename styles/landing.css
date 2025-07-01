@@ -531,7 +531,7 @@ a.cta-button:hover {
     top: 5px;
     text-decoration: none;
     color: white;
-    right: 100px;
+    right: 80px;
   }
   #menu::before {
     content: "≡";
