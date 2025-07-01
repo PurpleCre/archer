@@ -574,6 +574,24 @@ a.cta-button:hover {
     font-size: 70px;
     width: 100%;
   }
+
+  /* hero */
+  .hero {
+    height: auto;
+    background-attachment: scroll;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    line-height: 3.2rem;
+    max-width: 90%;
+    padding: 10px;
+  }
+  .hero .cta {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
 }
 /* utility classes */
 .hide {
