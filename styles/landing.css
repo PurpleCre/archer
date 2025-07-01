@@ -509,7 +509,7 @@ a.cta-button:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   /* header */
   header {
     position: relative;
