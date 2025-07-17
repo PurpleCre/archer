@@ -30,7 +30,8 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover, #clear:hover {
+button:hover,
+#clear:hover {
   background-color: white;
   color: var(--federal-blue);
   transform: scale3d(1.05, 1.05, 1);
@@ -111,7 +112,6 @@ nav ul li a:hover {
 
 /* main */
 
-
 #arch-page section {
   padding: 60px 30px 0 30px;
 }
@@ -160,7 +160,7 @@ nav ul li a:hover {
 }
 
 .archer {
-  color: var(--accent-gold)
+  color: var(--accent-gold);
 }
 
 .hero p {
@@ -172,7 +172,7 @@ nav ul li a:hover {
 
 .hero .cta {
   flex-direction: row-reverse;
-} 
+}
 
 .metrics {
   display: flex;
@@ -255,7 +255,7 @@ nav ul li a:hover {
 
 /* projects */
 
-#arch-vision {
+.arch-vision {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -265,7 +265,7 @@ nav ul li a:hover {
   padding-top: 0;
 }
 
-#arch-vision h3 {
+.arch-vision h3 {
   font-size: 3.3rem;
   font-weight: bolder;
   color: var(--federal-blue);
@@ -273,7 +273,7 @@ nav ul li a:hover {
   padding: 0;
 }
 
-#arch-vision p {
+.arch-vision p {
   font-size: 1.2rem;
   line-height: 1.4rem;
   font-weight: 500;
@@ -282,43 +282,126 @@ nav ul li a:hover {
 }
 
 /* projects */
+.arch-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.arch-projects a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .arch-proj {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 60px 30px;
+  gap: 10px;
+  border-radius: 20px 20px 0 0;
+  z-index: 0;
+  background: #ffffff;
+  padding-bottom: 20px;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
 
-.arch-proj img {
+.arch-proj .image {
+  position: relative;
+}
+
+.arch-proj .overlay {
+  position: absolute;
+  top: 0;
+  border-radius: 20px 20px 0 0;
+  z-index: 1;
+}
+
+.arch-proj .image button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.arch-proj .image button:hover {
+  background-color: var(--federal-blue);
+  color: white;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.arch-proj .image img {
   width: 100%;
   aspect-ratio: 3/2;
-  border-radius: 40px;
-  margin-bottom: 30px;
+  border-radius: 20px 20px 0 0;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-#arch-proj-info {
+.arch-proj-info {
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   gap: 2px;
   align-items: left;
+  text-align: left;
 }
 
-#arch-proj-info h2 {
-  font-size: 1.6rem;
+.arch-proj-info h2 {
+  font-size: 1.2rem;
   font-weight: 800;
 }
 
-.container p {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    font-weight: 500;
-} 
+.arch-proj-info p {
+  font-size: 1rem;
+  color: rgb(112, 112, 112);
+  line-height: 1.2rem;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 1px;
+}
+
+.arch-proj .overlay .hide, .arch-proj .image button .hide{
+  display: none;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--federal-blue);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+.divisions {
+  text-align: center;
+}
+.divisions ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+}
+
+.divisions ul li {
+  display: inline;;
+}
+
+.divisions ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.divisions ul li a:hover {
+  color: var(--pacific-cyan);
+  border-bottom: 2px solid var(--pacific-cyan);
+}
 
 /* media queries */
 @media (max-width: 768px) {
