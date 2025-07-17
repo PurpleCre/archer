@@ -14,26 +14,75 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./styles/base.css" />
+    <script
+      src="https://kit.fontawesome.com/c71b074868.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./scripts/landing.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>ARCHER</h1>
+      <h1>Architecture and Design</h1>
       <a href="#" id="menu"></a>
       <nav>
         <ul>
-          <li><a href="../construction">Construction & Civils</a></li>
-          <li><a href="#architecture">Architecture & Design</a></li>
-          <li><a href="#solar">Solar Power & Battery</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="./" class="active">
+              <span class="fa-solid fa-house"></span> Home</a
+            >
+          </li>
+          <li>
+            <a href="#architecture">
+              <span class="fa-regular fa-folder-open"></span> Projects</a
+            >
+          </li>
+          <li>
+            <a href="#solar"> <span class="fa-regular fa-user"></span> About</a>
+          </li>
+          <li>
+            <a href="#contact">
+              <span class="fa-regular fa-envelope"></span> Contact</a
+            >
+          </li>
+          <li>
+            <a href="#mission"><button id="clear">Get Qoute</button></a>
+          </li>
         </ul>
       </nav>
-      <div class="cta" id="nav-cta">
-        <a href="#mission"><button class="clear">Get Started</button></a
-        ><a href="#services"><button>Our Services</button></a>
-      </div>
     </header>
     <main id="arch-page">
+      <section class="hero">
+        <div class="overlay"></div>
+        <h1>Archer <br /><span class="archer">Architectural Designs</span></h1>
+        <p>
+          Integrating low energy design within urban environments through
+          holistic, flexible solutions that sustain rather than pollute.
+        </p>
+        <div class="cta">
+          <a href="./construction/"
+            ><button class="clear">Explore Projects</button></a
+          >
+          <a href="#services"><button>Watch Showcase</button></a>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <span class="gold">150+</span>
+            <p>Projects Completed</p>
+          </div>
+          <div class="metric">
+            <span class="gold">25+</span>
+            <p>Awards Won</p>
+          </div>
+          <div class="metric">
+            <span class="gold">15</span>
+            <p>Years Experience</p>
+          </div>
+          <div class="metric">
+            <span class="gold">98%</span>
+            <p>Client Satisfaction</p>
+          </div>
+        </div>
+      </section>
       <section id="arch-intro">
         <img src="./images/cityscape.webp" alt="" />
         <div>
@@ -45,14 +94,14 @@
             and aesthetically pleasing environments.
           </p>
           <div class="arch-cta1 cta">
-            <a href="./projects.html"><button class="clear">Our Projects</button></a
+            <a href="./projects.html"
+              ><button class="clear">Our Projects</button></a
             ><a href="#"><button>Learn More</button></a>
           </div>
         </div>
       </section>
       <section id="arch-vision">
-        <h2>Our Vision</h2>
-        <h3>Featured Architectural Projects</h3>
+        <h3>Featured Projects</h3>
         <p>
           Explore our portfolio of innovative architecture projects that
           redefine modern spaces and showcase our commitment to sustainable
@@ -81,7 +130,7 @@
               <h2>Green Residential Complex</h2>
               <p>Eco-Friendly # Energy-Efficient Homes # Solar Integration</p>
               <a href="./projects.html">View Project</a>
-            </div>  
+            </div>
             <p>
               Our portfolio also features eco-conscious residential communities
               that incorporate energy-efficient technologies and solar energy
