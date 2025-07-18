@@ -303,6 +303,21 @@ nav ul li a:hover {
   background: #ffffff;
   padding-bottom: 20px;
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  transition: all 1s ease ;
+  overflow: hidden;
+}
+
+.arch-proj:hover {
+  transform: translateY(-20px);
+}
+
+.arch-proj:hover img {
+  transition: all 1s ease ;
+}
+
+.arch-proj:hover img {
+  /* object-fit: contain; */
+  transform: scaleX(1.5);
 }
 
 .arch-proj .image {
@@ -314,6 +329,18 @@ nav ul li a:hover {
   top: 0;
   border-radius: 20px 20px 0 0;
   z-index: 1;
+}
+
+.arch-proj .tag {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  background-color: var(--accent-gold);
+  color: aliceblue;
+  font-size: 14px;
+  z-index: 1000;
 }
 
 .arch-proj .image button {
@@ -365,6 +392,11 @@ nav ul li a:hover {
 
 .arch-proj .overlay .hide, .arch-proj .image button .hide{
   display: none;
+}
+
+#all-projs button{
+  background-color: var(--federal-blue);
+  color: aliceblue;
 }
 
 /* footer */
