@@ -199,6 +199,7 @@ nav ul li a:hover {
   font-size: 2rem;
   font-weight: bolder;
 }
+
 .metric p {
   font-size: 1rem;
 }
@@ -255,7 +256,8 @@ nav ul li a:hover {
 
 /* projects */
 
-.arch-vision {
+.arch-vision,
+.services-sect {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -265,7 +267,8 @@ nav ul li a:hover {
   padding-top: 0;
 }
 
-.arch-vision h3 {
+.arch-vision h3,
+.services-sect h3 {
   font-size: 3.3rem;
   font-weight: bolder;
   color: var(--federal-blue);
@@ -273,12 +276,14 @@ nav ul li a:hover {
   padding: 0;
 }
 
-.arch-vision p {
+.arch-vision p,
+.services-sect p {
   font-size: 1.2rem;
   line-height: 1.4rem;
   font-weight: 500;
   /* max-width: 800px; */
   text-align: center;
+  width: 70%;
 }
 
 /* projects */
@@ -303,7 +308,7 @@ nav ul li a:hover {
   background: #ffffff;
   padding-bottom: 20px;
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
-  transition: all 1s ease ;
+  transition: all 1s ease;
   overflow: hidden;
 }
 
@@ -312,7 +317,7 @@ nav ul li a:hover {
 }
 
 .arch-proj:hover img {
-  transition: all 1s ease ;
+  transition: all 1s ease;
 }
 
 .arch-proj:hover img {
@@ -341,6 +346,7 @@ nav ul li a:hover {
   color: aliceblue;
   font-size: 14px;
   z-index: 1000;
+  width: 20%;
 }
 
 .arch-proj .image button {
@@ -390,15 +396,73 @@ nav ul li a:hover {
   margin-bottom: 1px;
 }
 
-.arch-proj .overlay .hide, .arch-proj .image button .hide{
+.arch-proj .overlay .hide,
+.arch-proj .image button .hide {
   display: none;
 }
 
-#all-projs button{
+#all-projs button {
   background-color: var(--federal-blue);
   color: aliceblue;
 }
 
+/* services */
+
+.services-sect {
+  background-color: var(--accent-gray);
+  border: none;
+  margin-bottom: 0;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  width: 100%;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+.service {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 0;
+  background: #ffffff;
+  padding-bottom: 20px;
+  transition: all 1s ease;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.service:hover {
+  transform: translateY(-20px);
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+.service .icon {
+  background-color: var(--federal-blue);
+  color: aliceblue;
+  max-width: 30px;
+  font-size: 40px;
+  height: auto;
+  padding: 20px 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.service h4 {
+  font-size: 1.4rem;
+}
+
+.service p {
+  text-align: left;
+  font-size: 1rem;
+}
 /* footer */
 
 footer {
@@ -406,11 +470,12 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
 }
+
 .divisions {
   text-align: center;
 }
+
 .divisions ul {
   list-style: none;
   display: flex;
@@ -420,7 +485,7 @@ footer {
 }
 
 .divisions ul li {
-  display: inline;;
+  display: inline;
 }
 
 .divisions ul li a {
