@@ -1,196 +1,164 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Architectural Projects | Archer Corporation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --federal-blue: #03045e;
-      --honolulu-blue: #0077b6;
-      --pacific-cyan: #00b4d8;
-      --non-photo-blue: #90e0ef;
-      --light-cyan: #caf0f8;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f9fafa;
-      color: #222;
-    }
-
-    header {
-      background-color: var(--federal-blue);
-      color: white;
-      padding: 20px 40px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 2rem;
-    }
-
-    .intro {
-      padding: 60px 20px 30px;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .intro h2 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 2.2rem;
-      color: var(--honolulu-blue);
-    }
-
-    .intro p {
-      font-size: 1.1rem;
-      margin-top: 20px;
-      line-height: 1.6;
-    }
-
-    .filters {
-      text-align: center;
-      margin: 20px auto 10px;
-    }
-
-    .filters button {
-      background-color: var(--honolulu-blue);
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      margin: 5px;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .filters button:hover {
-      background-color: var(--pacific-cyan);
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 30px 40px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      opacity: 1;
-      transition: transform 0.4s ease, opacity 0.4s ease;
-    }
-
-    .gallery-item.hidden {
-      opacity: 0;
-      transform: scale(0.95);
-      pointer-events: none;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .caption {
-      position: absolute;
-      bottom: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-      color: white;
-      width: 100%;
-      padding: 10px 15px;
-      font-size: 1rem;
-      font-family: 'Oswald', sans-serif;
-    }
-
-    footer {
-      background-color: var(--federal-blue);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Archer Architecture</h1>
-  </header>
-
-  <section class="intro">
-    <h2>Designing Spaces That Inspire</h2>
-    <p>At Archer Corporation, our architecture speaks of elegance, function, and a bold vision for the future. We don't just design buildings—we shape experiences, communities, and environments that uplift and endure. Explore a curated selection of our architectural portfolio.</p>
-  </section>
-
-  <div class="filters">
-    <button onclick="filterProjects('all')">All</button>
-    <button onclick="filterProjects('commercial')">Commercial</button>
-    <button onclick="filterProjects('residential')">Residential</button>
-    <button onclick="filterProjects('civic')">Civic</button>
-  </div>
-
-  <section class="gallery" id="gallery">
-    <div class="gallery-item commercial">
-      <img src="images/002 - AMCOTTS FORECOURT - CGI FINAL/AMCOTTS FURLING STATION - CGI_1 - Photo.jpg" alt="Modern commercial complex"/>
-      <div class="caption">Modern Commercial Complex – Harare CBD</div>
-    </div>
-    <div class="gallery-item commercial">
-      <img src="images/001 - NDASWI GOOD HOPE - FINAL - With Logo/Ndawi Good Hope_8 - Photo.jpg" alt="Modern commercial complex"/>
-      <div class="caption">Modern Commercial Complex – Harare CBD</div>
-    </div>
-    <div class="gallery-item residential">
-      <img src="images//002 - CLUSTER HOUSING DEV - POST PRODUCTION/CLUSTER HOUSING DEVELOPMENT_13 - Photo.jpg" alt="Sustainable housing estate"/>
-      <div class="caption">Sustainable Housing Estate – Borrowdale</div>
-    </div>
-    <div class="gallery-item residential">
-      <img src="images/003 - STAND 271 GREENDALE - CGIFinal - Rev/STAND 271 GREENDALE - Final_2 - Photo.jpg" alt="Minimalist villa design"/>
-      <div class="caption">Minimalist Villa – Umwinsidale</div>
-    </div>
-    <div class="gallery-item civic">
-      <img src="images/004 - STAND 271 GREENDALE - CGI - Rev/STAND 271 GREENDALE - REV_6 - Photo.jpg" alt="Civic center with solar integration"/>
-      <div class="caption">Civic Centre with Solar Integration – Bulawayo</div>
-    </div>
-    <div class="gallery-item residential">
-      <img src="images/001 - HSE MUNEMO  REVISED/001 REV_1 - Photo.jpg" alt="Luxury hillside apartments"/>
-      <div class="caption">Luxury Hillside Apartments – Glen Lorne</div>
-    </div>
-    <div class="gallery-item civic">
-      <img src="images/003 - AMCOTTS - CGI FINAL - WATER MARKED/007 - AMCOTTS - CGI.jpg" alt="Community art center"/>
-      <div class="caption">Community Art Centre – Chitungwiza</div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Archer Corporation. Designed by the Architecture Division.</p>
-  </footer>
-
-  <script>
-    function filterProjects(category) {
-      const items = document.querySelectorAll('.gallery-item');
-      items.forEach(item => {
-        if (category === 'all' || item.classList.contains(category)) {
-          item.classList.remove('hidden');
-        } else {
-          item.classList.add('hidden');
-        }
-      });
-    }
-  </script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Projects | Architecture & Design | Archer Corporation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../archer-logo.webp" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/projects.css" />
+    <script
+      src="https://kit.fontawesome.com/c71b074868.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/projects.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Architecture and Design</h1>
+      <a href="#" id="menu"></a>
+      <nav>
+        <ul>
+          <li>
+            <a href="./"> <span class="fa-solid fa-house"></span> Home</a>
+          </li>
+          <li>
+            <a href="./projects.html" class="active">
+              <span class="fa-regular fa-folder-open"></span> Projects</a
+            >
+          </li>
+          <li>
+            <a href="./about.html">
+              <span class="fa-regular fa-user"></span> About</a
+            >
+          </li>
+          <li>
+            <a href="./contact.html">
+              <span class="fa-regular fa-envelope"></span> Contact</a
+            >
+          </li>
+          <li>
+            <a href="./contact.html"><button id="clear">Get Qoute</button></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="arch-proj-page">
+      <div class="projects-header">
+        <h1>Our Projects</h1>
+        <p>
+          Explore our portfolio of innovative architectural designs that shape
+          the future of built environments.
+        </p>
+      </div>
+      <section class="project-filter" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="residential">
+          Residential
+        </button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="interior">
+          Interior Decoration
+        </button>
+      </section>
+      <section class="project-grid">
+        <div
+          class="project-item"
+          data-category="residential"
+          data-aos="zoom-in"
+        >
+          <a href="./project.html">
+            <div class="image">
+              <div class="overlay hide"></div>
+              <p class="tag">Residential</p>
+              <button class="details hide">View Details</button
+              ><img src="./images/tower.webp" alt="" />
+            </div>
+            <div class="arch-proj-info">
+              <h2>Skyline Residence</h2>
+              <p>
+                A modern residential complex featuring sustainable design and
+                panoramic city views.
+              </p>
+              <p>New York, NY</p>
+            </div>
+          </a>
+        </div>
+        <div class="project-item" data-category="commercial" data-aos="zoom-in">
+          <a href="./project.html">
+            <div class="image">
+              <div class="overlay hide"></div>
+              <p class="tag">Commercial</p>
+              <button class="details hide">View Details</button
+              ><img src="./images/tower.webp" alt="" />
+            </div>
+            <div class="arch-proj-info">
+              <h2>Skyline Residence</h2>
+              <p>
+                A modern residential complex featuring sustainable design and
+                panoramic city views.
+              </p>
+              <p>New York, NY</p>
+            </div>
+          </a>
+        </div>
+        <div class="project-item" data-category="commercial" data-aos="zoom-in">
+          <a href="./project.html">
+            <div class="image">
+              <div class="overlay hide"></div>
+              <p class="tag">Commercial</p>
+              <button class="details hide">View Details</button
+              ><img src="./images/tower.webp" alt="" />
+            </div>
+            <div class="arch-proj-info">
+              <h2>Skyline Residence</h2>
+              <p>
+                A modern residential complex featuring sustainable design and
+                panoramic city views.
+              </p>
+              <p>New York, NY</p>
+            </div>
+          </a>
+        </div>
+        <div class="project-item" data-category="interior" data-aos="zoom-in">
+          <a href="./project.html">
+            <div class="image">
+              <div class="overlay hide"></div>
+              <p class="tag">Interior Decor</p>
+              <button class="details hide">View Details</button
+              ><img src="./images/tower.webp" alt="" />
+            </div>
+            <div class="arch-proj-info">
+              <h2>Skyline Residence</h2>
+              <p>
+                A modern residential complex featuring sustainable design and
+                panoramic city views.
+              </p>
+              <p>New York, NY</p>
+            </div>
+          </a>
+        </div>
+        <!-- More project items -->
+      </section>
+    </main>
+    <footer>
+      <div class="divisions">
+        <h2>Explore Our Divisions</h2>
+        <ul>
+          <li><a href="../construction/">Construction and Civils</a></li>
+          <li><a href="./">Architecture and Design</a></li>
+          <li><a href="../solar/">Solar Power and Battery</a></li>
+        </ul>
+      </div>
+      <p>&copy; 2025 Archer Corporation. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
