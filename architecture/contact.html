@@ -19,7 +19,7 @@
       src="https://kit.fontawesome.com/c71b074868.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./scripts/home.js" defer></script>
+    <script src="./scripts/contact.js" defer></script>
   </head>
   <body>
     <header>
@@ -62,13 +62,13 @@
       <section class="contact-content">
         <section class="arch-form">
           <h2>Send us a message</h2>
-          <form action="">
+          <form id="whatsapp-form">
             <div class="name">
-              <label>First Name <input type="text" placeholder="John" required></label>
-              <label>Last Name <input type="text" placeholder="Doe" required></label>
+              <label>First Name <input type="text" id="fname" name="fname" placeholder="John" required></label>
+              <label>Last Name <input type="text" id="lname" name="lname" placeholder="Doe" required></label>
             </div>
-            <label>Email <input type="email" placeholder="john@email.com" required></label>
-            <label>Project Type <input type="text" required placeholder="e.g., Residential, Commercial"></label>
+            <label>Email <input type="email" id="email" name="email" placeholder="john@email.com" required></label>
+            <label>Project Type <input type="text" id="type" name="type" required placeholder="e.g., Residential, Commercial"></label>
             <label>Message <textarea name="msg" id="msg"></textarea></label>
             <input type="submit" value="Send Message">
           </form>
