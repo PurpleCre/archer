@@ -547,7 +547,7 @@ button {
 
 .team-member img {
   width: 180px;
-  height: auto;
+  height: 300px;
   border-radius: 50%;
   margin-bottom: 15px;
 }
@@ -574,9 +574,22 @@ button {
 .contact {
   padding-bottom: 80px;
 }
+
 #contact-us {
   text-align: center;
   padding: 20px 20px 30px 20px;
+}
+
+#contact-us h2 {
+  font-size: 2.5rem;
+  color: var(--federal-blue);
+  margin-bottom: 20px;
+}
+
+#contact-us p {
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+  color: #333;
 }
 
 .contact img {
@@ -592,7 +605,7 @@ button {
 
 .contact-form {
   position: absolute;
-  top: 200px;
+  top: 250px;
   left: 60vw;
   background: var(--grad);
   margin: 1rem 2%;

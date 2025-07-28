@@ -71,7 +71,7 @@ button {
   margin-right: 20px;
 }
 
-#tech-btns button:last-of-type {
+#tech-btns a:last-of-type button{
   background-color: transparent;
   color: var(--text-dark);
 }
