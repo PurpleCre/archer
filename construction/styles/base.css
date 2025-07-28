@@ -196,7 +196,40 @@ header .active {
   font-weight: bold;
   color: var(--text-light);
 }
+
 /* Footer */
+footer {
+  background-color: var(--federal-blue);
+}
+
+.divisions {
+  text-align: center;
+}
+
+.divisions ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+}
+
+.divisions ul li {
+  display: inline;
+}
+
+.divisions ul li a {
+  /* color: white; */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.divisions ul li a:hover {
+  color: var(--pacific-cyan);
+  border-bottom: 2px solid var(--pacific-cyan);
+}
+
 footer {
   display: grid;
   grid-template-rows: 4fr 1fr;
