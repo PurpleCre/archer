@@ -490,12 +490,49 @@ input[type="submit"] {
   margin-bottom: 10px;
 }
 
+/* footer */
 footer {
   background-color: var(--federal-blue);
   color: white;
   text-align: center;
   padding: 30px;
   margin-top: 40px;
+}
+
+footer {
+  background-color: var(--federal-blue);
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.divisions {
+  text-align: center;
+}
+
+.divisions ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+}
+
+.divisions ul li {
+  display: inline;
+}
+
+.divisions ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.divisions ul li a:hover {
+  color: var(--pacific-cyan);
+  border-bottom: 2px solid var(--pacific-cyan);
 }
 
 a.cta-button {

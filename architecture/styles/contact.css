@@ -72,7 +72,7 @@ label {
 .arch-form input, textarea {
   background-color: var(--accent-gray);
   border-radius: 10px;
-  width: 100%;
+  width: 80%;
 }
 
 textarea {
@@ -83,7 +83,7 @@ textarea {
 
 .arch-form input {
   display: block;
-  width: 100%;
+  width: 80%;
   padding: 0.75rem;
   margin: 0.5rem 0;
 }
@@ -95,6 +95,6 @@ textarea {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 10px;
 }
