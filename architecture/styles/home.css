@@ -234,7 +234,7 @@
   color: aliceblue;
   font-size: 14px;
   z-index: 1000;
-  width: 20%;
+  width: 30%;
 }
 
 .arch-proj .image button {
@@ -302,9 +302,18 @@
   margin-bottom: 0;
 }
 
+.contact-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 20px; */
+  padding: 0 0 30px 0;
+
+}
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 50px;
   width: 100%;
   padding-bottom: 60px;
@@ -315,15 +324,16 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1px;
   z-index: 0;
   background: #ffffff;
   padding-bottom: 20px;
   transition: all 1s ease;
   overflow: hidden;
   text-align: center;
-  padding: 10px;
+  padding: 30px 10px; 
   margin: 0;
+  width: 45vw;
 }
 
 .service:hover {
@@ -348,6 +358,8 @@
 }
 
 .service p {
-  text-align: left;
+  text-align: center;
   font-size: 1rem;
+  margin: 0 auto;
+  width: 80%;
 }
