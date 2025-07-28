@@ -8,6 +8,39 @@
   --accent-gold: #e7c118;
 }
 
+:root {
+  /* CSS HEX */
+  --federal-blue: #03045e;
+  --honolulu-blue: #0077b6;
+  --pacific-cyan: #00b4d8;
+  --non-photo-blue: #90e0ef;
+  --light-cyan: #caf0f8;
+  --accent-gray: #eff0f0;
+  --accent-gold: #e7c118;
+  --grad: linear-gradient(
+    135deg,
+    var(--federal-blue),
+    var(--honolulu-blue)
+  ); /* bacgorund color for CTA and hero banners or overlays */
+  --btn: var(--honolulu-blue); /* button color */
+  --btn-hover: var(--pacific-cyan); /* button hover color */
+  --text-color: var(--federal-blue); /* primary text color */
+  --text-color2: var(--honolulu-blue); /* secondary text color */
+  --light-cyan: #caf0f8ff;
+  --text-dark: #1e1e1e;
+  --text-light: #ffffff;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+
+  /* ----------------------------- */
+  /* archer styles */
+  --background: var(--light-cyan);
+  --card-bg: var(--non-photo-blue);
+  --primary: var(--federal-blue);
+  --secondary: var(--honolulu-blue);
+  --accent: var(--pacific-cyan);
+}
+
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -134,7 +167,6 @@ footer {
 }
 
 .divisions ul li a {
-  /* color: white; */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
@@ -149,15 +181,16 @@ footer {
   display: grid;
   grid-template-rows: 4fr 1fr;
   padding: 20px 30px 20px 30px;
-  background: var(--text-light);
-  color: var(--primary);
+  background: var(--federal-blue);
+  color: white;
   place-items: center;
   gap: 0;
   border-top: 2px solid var(--primary);
 }
 
 footer a {
-  color: var(--primary);
+  color: white;
+  text-decoration: none;
 }
 
 .footer-grid {
