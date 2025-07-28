@@ -536,7 +536,7 @@ button {
   background: white;
   border-radius: 10px;
   padding: 20px;
-  width: 220px;
+  width: 240px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -546,9 +546,9 @@ button {
 }
 
 .team-member img {
-  width: 180px;
+  width: 100%;
   height: 300px;
-  border-radius: 50%;
+  border-radius: 10%;
   margin-bottom: 15px;
 }
 
@@ -588,7 +588,7 @@ button {
 
 #contact-us p {
   margin: 0 auto 20px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #333;
 }
 

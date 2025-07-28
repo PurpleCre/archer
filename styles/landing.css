@@ -53,6 +53,12 @@ header h1 {
   font-size: 1.8rem;
 }
 
+header img {
+  height: 120px;
+  width: auto;
+  padding: 20px;
+}
+
 /* hamburger */
 #menu {
   display: none;
