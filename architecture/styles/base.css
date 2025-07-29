@@ -237,7 +237,7 @@ footer a {
 #contact-info {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 100px;
   margin: 0;
   padding: 0;
 }
