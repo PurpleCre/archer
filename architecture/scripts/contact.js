@@ -1,6 +1,6 @@
 //  link form to whatsapp
 document
-  .getElementById("whatsapp-form")
+  .querySelector(".whatsapp-form")
   .addEventListener("submit", function (e) {
     e.preventDefault();
 

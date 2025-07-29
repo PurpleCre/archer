@@ -27,8 +27,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
-
 // changing hero text
 const texts = [
   "Your Vision, Our Expertise",
@@ -114,7 +112,7 @@ setInterval(() => {
 
 //  link form to whatsapp
 document
-  .getElementById("whatsapp-form")
+  .querySelector(".whatsapp-form")
   .addEventListener("submit", function (e) {
     e.preventDefault();
 

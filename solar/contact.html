@@ -20,6 +20,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./scripts/home.js" defer></script>
+    <script src="./scripts/contact.js" defer></script>
   </head>
   <body>
     <header>
@@ -62,17 +63,17 @@
       <section class="contact-content">
         <section class="arch-form">
           <h2>Send us a message</h2>
-          <form action="">
+          <form class="whatsapp-form">
             <div class="name">
               <label
-                >First Name <input type="text" placeholder="John" required
+                >First Name <input id="fname" type="text" placeholder="John" required
               /></label>
               <label
-                >Last Name <input type="text" placeholder="Doe" required
+                >Last Name <input id="lname" type="text" placeholder="Doe" required
               /></label>
             </div>
             <label
-              >Email <input type="email" placeholder="john@email.com" required
+              >Email <input id="email" type="email" placeholder="john@email.com" required
             /></label>
             <label>Message <textarea name="msg" id="msg"></textarea></label>
             <input type="submit" value="Send Message" />
