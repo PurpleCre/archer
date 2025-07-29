@@ -54,61 +54,61 @@ setInterval(() => {
   }, 500);
 }, 4000); // Change text every 3 seconds
 
-let currentSlide = 0;
-const carousel = document.querySelector(".carousel");
-const images = document.querySelectorAll(".carousel img");
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
-const dotsContainer = document.querySelector(".dots-container");
+// let currentSlide = 0;
+// const carousel = document.querySelector(".carousel");
+// const images = document.querySelectorAll(".carousel img");
+// const prevBtn = document.querySelector(".prev-btn");
+// const nextBtn = document.querySelector(".next-btn");
+// const dotsContainer = document.querySelector(".dots-container");
 
-images[currentSlide].classList.add("active");
+// images[currentSlide].classList.add("active");
 
 // Create dots
-for (let i = 0; i < images.length; i++) {
-  const dot = document.createElement("div");
-  dot.classList.add("dot");
-  if (i === currentSlide) {
-    dot.classList.add("active");
-  }
-  dot.addEventListener("click", () => {
-    currentSlide = i;
-    updateSlide();
-  });
-  dotsContainer.appendChild(dot);
-}
+// for (let i = 0; i < images.length; i++) {
+//   const dot = document.createElement("div");
+//   dot.classList.add("dot");
+//   if (i === currentSlide) {
+//     dot.classList.add("active");
+//   }
+//   dot.addEventListener("click", () => {
+//     currentSlide = i;
+//     updateSlide();
+//   });
+//   dotsContainer.appendChild(dot);
+// }
 
-prevBtn.addEventListener("click", () => {
-  currentSlide = (currentSlide - 1 + images.length) % images.length;
-  updateSlide();
-});
+// prevBtn.addEventListener("click", () => {
+//   currentSlide = (currentSlide - 1 + images.length) % images.length;
+//   updateSlide();
+// });
 
-nextBtn.addEventListener("click", () => {
-  currentSlide = (currentSlide + 1) % images.length;
-  updateSlide();
-});
+// nextBtn.addEventListener("click", () => {
+//   currentSlide = (currentSlide + 1) % images.length;
+//   updateSlide();
+// });
 
-function updateSlide() {
-  images.forEach((image, index) => {
-    image.classList.remove("active");
-    if (index === currentSlide) {
-      image.classList.add("active");
-    }
-  });
+// function updateSlide() {
+//   images.forEach((image, index) => {
+//     image.classList.remove("active");
+//     if (index === currentSlide) {
+//       image.classList.add("active");
+//     }
+//   });
 
-  const dots = document.querySelectorAll(".dot");
-  dots.forEach((dot, index) => {
-    dot.classList.remove("active");
-    if (index === currentSlide) {
-      dot.classList.add("active");
-    }
-  });
-}
+//   const dots = document.querySelectorAll(".dot");
+//   dots.forEach((dot, index) => {
+//     dot.classList.remove("active");
+//     if (index === currentSlide) {
+//       dot.classList.add("active");
+//     }
+//   });
+// }
 
 // Auto slide
-setInterval(() => {
-  currentSlide = (currentSlide + 1) % images.length;
-  updateSlide();
-}, 5000);
+// setInterval(() => {
+//   currentSlide = (currentSlide + 1) % images.length;
+//   updateSlide();
+// }, 5000);
 
 //  link form to whatsapp
 document
