@@ -12,10 +12,10 @@ document
     const message = document.getElementById("msg").value.trim();
     
     const name = `${fname} ${lname}`;
-    const phoneNumber = "263776583517"; // e.g., 263771234567 (no + sign)
+    const phoneNumber = "2263789177726"; // e.g., 263771234567 (no + sign)
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      `Hello, my name is ${name}. I have a ${type} project, with thw following specifications. ${message}`
+      `Hello, my name is ${name}. I have a project, with thw following specifications. ${message}`
     )}`;
 
     window.open(url, "_blank");
