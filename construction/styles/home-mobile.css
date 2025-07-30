@@ -46,16 +46,21 @@
     width: 95%;
     margin: 0 auto;
   }
+
+  /* hero */
   .hero-img h1 {
     font-size: 2rem;
   }
-
+  .hero-img {
+    height: 70vh;
+  }
   .hero.home {
     color: var(--text-light);
     text-align: center;
     padding: 10px 10px 30px 10px;
   }
 
+  /* about */
   .about {
     padding: 30px 20px;
     gap: 20px;
@@ -64,11 +69,26 @@
     top: 30%;
     left: 20%;
     filter: blur(4px);
+    opacity: 0.5;
   }
-  .about-card-left, .about-card-left {
+  #hook-img {
+    top: 30%;
+    right: 10%;
+    filter: blur(4px);
+    opacity: 0.5;
+  }
+  .about-card-right {
+    translate: unset;
+  }
+  .about-card-left {
+    translate: unset;
+  }
+  .about-card-left,
+  .about-card-left {
     color: var(--text-light);
   }
 
+  /* services */
   .services {
     grid-template-columns: 1fr;
     place-items: center;
@@ -78,5 +98,16 @@
     grid-column: 1/2;
     width: 80vw;
     border-radius: 10px;
+  }
+
+  /* contact */
+  .contact img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 40px 40px 0;
+  
+  }
+  .contact-form {
+    position: static;
   }
 }

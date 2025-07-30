@@ -7,6 +7,10 @@
   --accent-gray: #eff0f0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -595,34 +599,6 @@ a.cta-button:hover {
   #menu.show::before {
     content: "✖";
     font-size: 3rem;
-  }
-
-  /* nav */
-  nav,
-  #nav-cta {
-    display: none;
-  }
-  nav.show {
-    display: flex;
-    /* position: relative; */
-  }
-  nav.show ul {
-    background-color: var(--federal-blue);
-    position: absolute;
-    top: 160px;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    transition: all 1s ease-out;
-  }
-  li {
-    padding-bottom: 20px;
-  }
-  li a {
-    font-size: 70px;
   }
 
   /* hero */

@@ -96,7 +96,6 @@
   background: var(--grad);
   padding: 25px 0;
 }
-
 .btn-primary {
   background-color: var(--honolulu-blue);
   color: var(--text-light);
@@ -109,27 +108,22 @@
   display: inline-block;
   margin-top: 1rem;
 }
-
 .btn-primary:hover {
   background-color: var(--pacific-cyan);
 }
-
 .hero.home {
   color: var(--text-light);
   text-align: center;
 }
-
 .hero.home h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
-
 .hero.home h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: var(--pacific-cyan);
 }
-
 .hero.home p {
   max-width: 800px;
   margin: 0 auto 2rem;
@@ -144,33 +138,28 @@
   max-width: 960px;
   margin: 3rem auto;
 }
-
 .section h2,
 .section h3,
 .section h4 {
   color: var(--federal-blue);
   margin-top: 1.5rem;
 }
-
 .section ul {
   list-style: disc;
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
-
 .section ul li {
   margin-bottom: 0.5rem;
   text-align: left;
 }
-
 .about {
   padding: 30px 10px;
   gap: 20px;
 }
-
 .about-card-right {
   background-color: var(--secondary);
-  /* color: var(--text-dark); */
+  color: var(--text-light);
   width: 50vw;
   padding: 20px;
   margin: 10px 0;
@@ -178,7 +167,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   translate: 420px;
 }
-
 .about-card-left {
   background-color: var(--secondary);
   width: 50vw;
@@ -188,18 +176,15 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   translate: -140px;
 }
-
 #why-us {
   text-align: center;
   padding: 0 60px;
 }
-
 .about-div {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
 .about-div img {
   width: 100%;
   height: auto;
