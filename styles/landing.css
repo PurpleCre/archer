@@ -259,9 +259,6 @@ nav ul li a:hover {
   border-top: #333 2px solid;
 }
 
-.details {
-}
-
 .details h4 {
   font-size: 1.7rem;
   font-weight: 900;
@@ -462,7 +459,7 @@ input[type="submit"] {
   color: white;
   cursor: pointer;
 }
-.cards {
+/* .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -494,7 +491,7 @@ input[type="submit"] {
   color: var(--federal-blue);
   font-size: 1.3rem;
   margin-bottom: 10px;
-}
+} */
 
 /* footer */
 footer {
@@ -574,10 +571,8 @@ a.cta-button:hover {
     display: flex;
     justify-content: center;
   }
-
-  header h1 {
-    font-size: 50px;
-    margin: 5px;
+  header img {
+    width: 180px;
   }
 
   /* hamburger */
@@ -587,7 +582,7 @@ a.cta-button:hover {
     top: 5px;
     text-decoration: none;
     color: white;
-    right: 20vw;
+    right: 10vw;
   }
   #menu::before {
     content: "≡";
@@ -609,33 +604,32 @@ a.cta-button:hover {
   }
   nav.show {
     display: flex;
-    position: relative;
+    /* position: relative; */
   }
   nav.show ul {
     background-color: var(--federal-blue);
     position: absolute;
-    top: 40px;
-    left: -78vw;
+    top: 160px;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
     transition: all 1s ease-out;
-    width: 100vw;
   }
   li {
     padding-bottom: 20px;
   }
-  li a{
+  li a {
     font-size: 70px;
-    width: 100%;
   }
 
   /* hero */
   .hero {
     height: auto;
     background-attachment: scroll;
-    text-align: center; 
+    text-align: center;
   }
   .hero h1 {
     font-size: 3rem;
@@ -647,6 +641,58 @@ a.cta-button:hover {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
+  }
+
+  /* column styles */
+  #construction .container,
+  #architecture,
+  #solar,
+  #miss-content,
+  #service-hook,
+  .project,
+  #contact {
+    grid-template-columns: 1fr;
+  }
+  .divisions ul,
+  #services-content {
+    flex-direction: column;
+  }
+
+  /* construction */
+  #construction img {
+    border-radius: 40px 40px 0 0;
+    margin: 0;
+  }
+
+  /* architecture */
+  .project img,
+  #solar img {
+    max-width: 100%;
+  }
+
+  /* solar */
+  #solar img {
+    border-radius: 40px 40px 0 0;
+  }
+
+  /* mission */
+  #mission {
+    padding-bottom: 0;
+    margin-bottom: -5px;
+  }
+  #mission img {
+    border-radius: 40px 40px 0 0;
+  }
+
+  /* contact */
+  .map img {
+    padding: 0;
+    border-radius: 40px 40px 0 0;
+    width: 100vw;
+  }
+  /* footer */
+  .divisions ul {
+    gap: 10px;
   }
 }
 /* utility classes */
