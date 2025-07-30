@@ -71,7 +71,7 @@ button {
   margin-right: 20px;
 }
 
-#tech-btns a:last-of-type button{
+#tech-btns a:last-of-type button {
   background-color: transparent;
   color: var(--text-dark);
 }
@@ -109,13 +109,11 @@ button:hover {
   border-radius: var(--border-radius);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 #bg {
   width: 82vw;
   height: 290px;
   transform: rotate(1deg);
 }
-
 .call {
   z-index: 4;
   position: absolute;
@@ -132,26 +130,22 @@ button:hover {
   color: var(--text-light);
   margin-left: 22px;
 }
-
 .call-info,
 #call-btn {
   transform: rotate(1deg);
 }
-
 .call-info h3 {
   font-size: 35px;
   font-weight: 600;
   margin: 0 0 30px 0;
   text-align: left;
 }
-
 .call-info p {
   font-size: 18px;
   font-weight: 400;
   margin: 0;
   text-align: left;
 }
-
 #call-btn {
   width: 180px;
   height: 40px;
@@ -163,6 +157,7 @@ button:hover {
   text-decoration: none;
 }
 
+/* tech divs */
 .tech-intro-one,
 .tech-intro-two,
 .tech-intro-three {
@@ -174,23 +169,19 @@ button:hover {
   padding: 30px;
   column-gap: 20px;
 }
-
 .item {
   border-left: 3px solid;
   padding: 0 0 0 10px;
 }
-
 .item h2 {
   font-size: 35px;
   font-weight: 600;
   color: var(--text-color);
 }
-
 .item p {
   font-size: 16px;
   font-weight: 400;
 }
-
 .tech-intro video {
   object-fit: cover;
   width: 500px;
@@ -198,7 +189,6 @@ button:hover {
   border-radius: var(--border-radius);
   box-shadow: 0 4px 8px rgba(31, 1, 139, 0.2);
 }
-
 #gamazin {
   width: 90%;
   border-radius: var(--border-radius);
@@ -317,4 +307,78 @@ button:hover {
 #one {
   width: 780px;
   height: auto;
+}
+
+@media screen and (max-width: 500px) {
+  /* hero */
+  .tech-hero {
+    width: 95%;
+    margin: 20px auto;
+  }
+  .tech-hero h1 {
+    font-size: 1.7rem;
+  }
+
+  /* cta div */
+  .tech-call {
+    margin-top: 60px;
+  }
+  #bg,
+  .call {
+    height: 400px;
+  }
+  #bg {
+    width: 84vw;
+    height: 440px;
+  }
+  .call {
+    flex-direction: column;
+    padding: 20px;
+    row-gap: 20px;
+    left: 0;
+
+  }
+
+  /* tech divs */
+  .tech-intro-one,
+  .tech-intro-two,
+  .tech-intro-three {
+    flex-direction: column;
+    padding: 5px;
+  }
+  .tech-intro-two {
+    flex-direction: column-reverse;
+  }
+  .tech-intro video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    margin-top: 60px;
+  }
+  #gamazin {
+    height: 380px;
+    margin-top: 60px;
+  }
+
+  /* discover */
+  .discover {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .disc-btns {
+    position: static;
+    width: 100%;
+  }
+  .disc-btns button {
+    width: 100%;
+  }
+  .disc-steps {
+    padding: 0;
+  }
+  .step {
+    width: 90%;
+    margin: 0 auto;
+    height: 220px;
+  } 
 }
