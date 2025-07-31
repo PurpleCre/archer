@@ -20,14 +20,14 @@ const nav = document.querySelector("nav");
 // });
 
 // show to top button on scroll
-// window.addEventListener("scroll", () => {
-//   const toTop = document.querySelector(".top-btn");
-//   if (window.scrollY > 600) {
-//     toTop.classList.remove("hide");
-//   } else {
-//     toTop.classList.add("hide");
-//   }
-// });
+window.addEventListener("scroll", () => {
+  const toTop = document.querySelector(".top-btn");
+  if (window.scrollY > 600) {
+    toTop.classList.remove("hide");
+  } else {
+    toTop.classList.add("hide");
+  }
+});
 
 // responsive ham and nav
 ham.addEventListener("click", () => {

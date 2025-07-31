@@ -120,7 +120,7 @@ nav ul li a:hover {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-image: url("../images/hero.webp");
   background-attachment: fixed;
   background-size: cover;
@@ -635,10 +635,17 @@ a.cta-button:hover {
     height: auto;
     background-attachment: scroll;
     text-align: center;
+    height: 670px;
   }
   .hero h1 {
     font-size: 3rem;
     line-height: 3.2rem;
+    max-width: 90%;
+    padding: 10px;
+    padding-top: 70px
+  }
+  .hero p {
+    font-size: 1.2rem;
     max-width: 90%;
     padding: 10px;
   }

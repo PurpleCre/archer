@@ -52,7 +52,7 @@
     font-size: 2rem;
   }
   .hero-img {
-    height: 70vh;
+    height: 400px;
   }
   .hero.home {
     color: var(--text-light);
