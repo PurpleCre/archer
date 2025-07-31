@@ -5,9 +5,6 @@
 }
 
 /* hero */
-
-/* parallax */
-
 .overlay {
   position: absolute;
   top: 0;
@@ -17,7 +14,6 @@
   background-color: rgba(14, 15, 119, 0.6);
   z-index: -1;
 }
-
 .hero {
   position: relative;
   width: 95%;
@@ -36,7 +32,6 @@
   color: white;
   z-index: 0;
 }
-
 .hero h1 {
   font-size: 5rem;
   font-family: "Oswald", sans-serif;
@@ -46,22 +41,18 @@
   text-align: center;
   margin: 0 auto;
 }
-
 .archer {
   color: var(--accent-gold);
 }
-
 .hero p {
   font-size: 1.2rem;
   max-width: 60%;
   text-align: center;
   margin: 20px auto 0;
 }
-
 .hero .cta {
   flex-direction: row-reverse;
 }
-
 .metrics {
   display: flex;
   flex-direction: row;
@@ -73,7 +64,6 @@
   padding-top: 40px;
   width: 80%;
 }
-
 .metric {
   display: flex;
   flex-direction: column;
@@ -81,16 +71,15 @@
   text-align: center;
   place-items: center;
 }
-
 .gold {
   color: var(--accent-gold);
   font-size: 2rem;
   font-weight: bolder;
 }
-
 .metric p {
   font-size: 1rem;
 }
+
 /* intro section */
 #arch-intro {
   display: grid;
@@ -309,7 +298,6 @@
   justify-content: center;
   /* gap: 20px; */
   padding: 0 0 30px 0;
-
 }
 .services {
   display: grid;
@@ -331,7 +319,7 @@
   transition: all 1s ease;
   overflow: hidden;
   text-align: center;
-  padding: 30px 10px; 
+  padding: 30px 10px;
   margin: 0;
   width: 45vw;
 }
@@ -362,4 +350,63 @@
   font-size: 1rem;
   margin: 0 auto;
   width: 80%;
+}
+
+/* media queries */
+@media screen and (max-width: 500px) {
+  /* main content */
+  main {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  /* hero */
+  .hero {
+    height: 600px;
+  }
+  .hero h1,
+  #arch-intro h1 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    max-width: 100%;
+  }
+  .hero p {
+    max-width: 90%;
+  }
+
+  /* intro section */
+  #arch-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 0;
+  }
+
+  /* services */
+  .services {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .service {
+    width: 80vw;
+    border-radius: 10px;
+  }
+
+  /* projects */
+  .arch-vision h3,
+  .services-sect h3 {
+    font-size: 2.5rem;
+  }
+  .arch-vision p,
+  .services-sect p {
+    font-size: 1.1rem;
+    width: 90%;
+  }
+  .arch-projects {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .arch-proj {
+    width: 80vw;
+    border-radius: 10px;
+  }
 }
