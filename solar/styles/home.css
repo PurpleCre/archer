@@ -1,13 +1,9 @@
 /* main */
-
 #arch-page section {
   padding: 60px 30px 0 30px;
 }
 
 /* hero */
-
-/* parallax */
-
 .overlay {
   position: absolute;
   top: 0;
@@ -17,7 +13,6 @@
   background-color: rgba(14, 15, 119, 0.6);
   z-index: -1;
 }
-
 .hero {
   position: relative;
   width: 95%;
@@ -36,7 +31,6 @@
   color: white;
   z-index: 0;
 }
-
 .hero h1 {
   font-size: 5rem;
   font-family: "Oswald", sans-serif;
@@ -46,22 +40,18 @@
   text-align: center;
   margin: 0 auto;
 }
-
 .archer {
   color: var(--accent-gold);
 }
-
 .hero p {
   font-size: 1.2rem;
   max-width: 60%;
   text-align: center;
   margin: 20px auto 0;
 }
-
 .hero .cta {
   flex-direction: row-reverse;
 }
-
 .metrics {
   display: flex;
   flex-direction: row;
@@ -73,7 +63,6 @@
   padding-top: 40px;
   width: 80%;
 }
-
 .metric {
   display: flex;
   flex-direction: column;
@@ -81,69 +70,58 @@
   text-align: center;
   place-items: center;
 }
-
 .gold {
   color: var(--accent-gold);
   font-size: 2rem;
   font-weight: bolder;
 }
-
 .metric p {
   font-size: 1rem;
 }
+
 /* intro section */
 #arch-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 70px;
 }
-
 #arch-intro img {
   width: 100%;
   aspect-ratio: 9/10;
   border-radius: 40px;
 }
-
 #arch-intro div {
   display: flex;
   flex-direction: column;
   padding-top: 40px;
   align-items: center;
 }
-
 #arch-intro h1 {
   font-size: 3.5rem;
   font-weight: bolder;
   line-height: 3.6rem;
 }
-
 #arch-intro span {
   color: var(--accent-gold);
 }
-
 #arch-intro p {
   font-size: 1.4rem;
   line-height: 1.5rem;
 }
-
 #arch-intro div div {
   flex-direction: row;
 }
-
 .arch-cta1 button {
   border: 2px solid var(--federal-blue);
 }
-
 .arch-cta1 button.clear {
   background-color: var(--federal-blue);
 }
-
 .arch-cta1 button.clear:hover {
   background-color: white;
 }
 
 /* projects */
-
 .arch-vision,
 .services-sect {
   display: flex;
@@ -154,7 +132,6 @@
   margin-top: 40px;
   padding-top: 0;
 }
-
 .arch-vision h3,
 .services-sect h3 {
   font-size: 3.3rem;
@@ -163,7 +140,6 @@
   margin: 0;
   padding: 0;
 }
-
 .arch-vision p,
 .services-sect p {
   font-size: 1.2rem;
@@ -180,12 +156,10 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
-
 .arch-projects a {
   text-decoration: none;
   color: inherit;
 }
-
 .arch-proj {
   width: 100%;
   display: flex;
@@ -199,31 +173,24 @@
   transition: all 1s ease;
   overflow: hidden;
 }
-
 .arch-proj:hover {
   transform: translateY(-20px);
 }
-
 .arch-proj:hover img {
   transition: all 1s ease;
 }
-
 .arch-proj:hover img {
-  /* object-fit: contain; */
   transform: scaleX(1.5);
 }
-
 .arch-proj .image {
   position: relative;
 }
-
 .arch-proj .overlay {
   position: absolute;
   top: 0;
   border-radius: 20px 20px 0 0;
   z-index: 1;
 }
-
 .arch-proj .tag {
   position: absolute;
   top: 10px;
@@ -236,7 +203,6 @@
   z-index: 1000;
   width: 30%;
 }
-
 .arch-proj .image button {
   position: absolute;
   top: 50%;
@@ -248,19 +214,16 @@
   font-weight: bold;
   z-index: 2;
 }
-
 .arch-proj .image button:hover {
   background-color: var(--federal-blue);
   color: white;
   transform: translate(-50%, -50%) scale(1.05);
 }
-
 .arch-proj .image img {
   width: 100%;
   aspect-ratio: 3/2;
   border-radius: 20px 20px 0 0;
 }
-
 .arch-proj-info {
   padding: 10px 20px;
   display: flex;
@@ -269,12 +232,10 @@
   align-items: left;
   text-align: left;
 }
-
 .arch-proj-info h2 {
   font-size: 1.2rem;
   font-weight: 800;
 }
-
 .arch-proj-info p {
   font-size: 1rem;
   color: rgb(112, 112, 112);
@@ -283,25 +244,21 @@
   padding: 0;
   margin-bottom: 1px;
 }
-
 .arch-proj .overlay .hide,
 .arch-proj .image button .hide {
   display: none;
 }
-
 #all-projs button {
   background-color: var(--federal-blue);
   color: aliceblue;
 }
 
 /* services */
-
 .services-sect {
   background-color: var(--accent-gray);
   border: none;
   margin-bottom: 0;
 }
-
 .contact-div {
   display: flex;
   flex-direction: column;
@@ -319,7 +276,6 @@
   padding-bottom: 60px;
   margin-bottom: 0;
 }
-
 .service {
   width: 100%;
   display: flex;
@@ -335,12 +291,10 @@
   margin: 0;
   width: 45vw;
 }
-
 .service:hover {
   transform: translateY(-20px);
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
-
 .service .icon {
   background-color: var(--federal-blue);
   color: aliceblue;
@@ -352,14 +306,71 @@
   margin: 0 auto;
   margin-top: 10px;
 }
-
 .service h4 {
   font-size: 1.4rem;
 }
-
 .service p {
   text-align: center;
   font-size: 1rem;
   margin: 0 auto;
   width: 80%;
+}
+
+/* media queries */
+@media screen and (max-width: 500px) {
+  /* main content */
+  main {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  /* hero */
+  .hero {
+    height: 600px;
+  }
+  .hero h1,
+  #arch-intro h1 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    max-width: 100%;
+  }
+  .hero p {
+    max-width: 90%;
+  }
+
+  /* intro section */
+  #arch-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 0;
+  }
+
+  /* services */
+  .services {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .service {
+    width: 80vw;
+    border-radius: 10px;
+  }
+
+  /* projects */
+  .arch-vision h3,
+  .services-sect h3 {
+    font-size: 2.5rem;
+  }
+  .arch-vision p,
+  .services-sect p {
+    font-size: 1.1rem;
+    width: 90%;
+  }
+  .arch-projects {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .arch-proj {
+    width: 80vw;
+    border-radius: 10px;
+  }
 }
