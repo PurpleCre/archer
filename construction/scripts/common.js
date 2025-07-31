@@ -31,6 +31,7 @@ window.addEventListener("scroll", () => {
 
 // responsive ham and nav
 ham.addEventListener("click", () => {
+  console.log("Ham clicked");
   ham.classList.toggle("show");
   nav.classList.toggle("show");
 });
