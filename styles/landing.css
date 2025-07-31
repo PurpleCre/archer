@@ -601,6 +601,35 @@ a.cta-button:hover {
     font-size: 3rem;
   }
 
+    /* nav */
+  nav,
+  #nav-cta {
+    display: none;
+  }
+  nav.show {
+    display: flex;
+    /* position: relative; */
+  }
+  nav.show ul {
+    background-color: rgba(1, 44, 117, 0.8);
+    position: absolute;
+    top: 164px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    transition: all 1s ease-out;
+  }
+  li {
+    padding-bottom: 20px;
+  }
+  li a {
+    font-size: 70px;
+  }
+
   /* hero */
   .hero {
     height: auto;
