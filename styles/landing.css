@@ -702,6 +702,11 @@ a.cta-button:hover {
     border-radius: 40px 40px 0 0;
     width: 100vw;
   }
+  .form {
+    padding: 0;
+    place-items: center;
+  }
+
   /* footer */
   .divisions ul {
     gap: 10px;
