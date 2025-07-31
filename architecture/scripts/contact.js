@@ -15,7 +15,7 @@ document
     const phoneNumber = "263789177726"; // e.g., 263771234567 (no + sign)
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      `Hello, my name is ${name}. I have a ${type} project, with thw following specifications. ${message}`
+      `Hello, my name is ${name}. I have a ${type} project, with the following specifications. ${message}`
     )}`;
 
     window.open(url, "_blank");
