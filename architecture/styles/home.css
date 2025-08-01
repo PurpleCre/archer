@@ -363,7 +363,7 @@
   /* hero */
   .hero {
     height: 600px;
-    width: 100vw;
+    max-width: 84vw;
   }
   .hero h1,
   #arch-intro h1 {
