@@ -266,7 +266,6 @@
   justify-content: center;
   /* gap: 20px; */
   padding: 0 0 30px 0;
-
 }
 .services {
   display: grid;
@@ -287,7 +286,7 @@
   transition: all 1s ease;
   overflow: hidden;
   text-align: center;
-  padding: 30px 10px; 
+  padding: 30px 10px;
   margin: 0;
   width: 45vw;
 }
@@ -323,10 +322,15 @@
     width: 95%;
     margin: 0 auto;
   }
+  #arch-page section {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   /* hero */
   .hero {
     height: 660px;
+    width: 100%;
   }
   .hero h1,
   #arch-intro h1 {
