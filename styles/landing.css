@@ -316,7 +316,7 @@ nav ul li a:hover {
 }
 
 #solar img {
-  height: 100vh;
+  height: 100%;
 }
 
 /* mission */
@@ -685,6 +685,8 @@ a.cta-button:hover {
   /* solar */
   #solar img {
     border-radius: 40px 40px 0 0;
+    height: 400px;
+    width: 100%;
   }
 
   /* mission */
