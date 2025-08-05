@@ -569,6 +569,9 @@ a.cta-button:hover {
 }
 
 @media screen and (max-width: 500px) {
+  body img{
+    padding: 0;
+  }
   main {
     width: 100vw;
     margin: 0 auto;
@@ -687,6 +690,7 @@ a.cta-button:hover {
   .project img,
   #solar img {
     max-width: 100%;
+    padding: 0;
   }
 
   /* solar */
