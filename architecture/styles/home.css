@@ -16,8 +16,8 @@
 }
 .hero {
   position: relative;
-  width: 95%;
-  height: 110vh;
+  width: 100%;
+  height: auto;
   background-image: url("../images/cityscape.webp");
   background-attachment: fixed;
   background-size: cover;
@@ -61,8 +61,8 @@
   gap: 10px;
   border-top: 2px solid white;
   margin-top: 20px;
-  padding-top: 40px;
   width: 80%;
+  padding: 40px 0 60px 0;
 }
 .metric {
   display: flex;
