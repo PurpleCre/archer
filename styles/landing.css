@@ -600,6 +600,7 @@ a.cta-button:hover {
   }
   header img {
     width: 180px;
+    height: auto;
   }
 
   /* hamburger */
@@ -636,7 +637,7 @@ a.cta-button:hover {
   nav.show ul {
     background-color: rgba(1, 44, 117, 0.8);
     position: absolute;
-    top: 160px;
+    top: 167px;
     left: 0;
     right: 0;
     display: flex;
