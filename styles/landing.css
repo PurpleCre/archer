@@ -567,13 +567,18 @@ a.cta-button:hover {
 }
 
 @media screen and (max-width: 500px) {
+  main {
+    width: 100vw;
+    margin: 0 auto;
+  }
   /* header */
   header {
     position: relative;
-    padding: 5px 10px 0 20px;
+    padding: 0;
     font-size: 2rem;
     display: flex;
     justify-content: center;
+    width: 100vw
   }
   header img {
     width: 180px;
@@ -632,10 +637,10 @@ a.cta-button:hover {
 
   /* hero */
   .hero {
-    height: auto;
     background-attachment: scroll;
     text-align: center;
-    height: 670px;
+    height: auto;
+    width: 100vw;
   }
   .hero h1 {
     font-size: 3rem;
