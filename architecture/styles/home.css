@@ -383,6 +383,9 @@
   .hero p {
     max-width: 90%;
   }
+  .metrics {
+    padding: 0 0 60px 0;
+  }
 
   /* intro section */
   #arch-intro {

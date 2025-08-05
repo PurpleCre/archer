@@ -329,7 +329,7 @@
 
   /* hero */
   .hero {
-    height: 660px;
+    height: auto;
     width: 100%;
   }
   .hero h1,
@@ -340,6 +340,9 @@
   }
   .hero p {
     max-width: 90%;
+  }
+  .metrics {
+    padding: 0 0 60px 0;
   }
 
   /* intro section */
