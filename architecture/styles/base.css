@@ -31,12 +31,15 @@
   --secondary: var(--honolulu-blue);
   --accent: var(--pacific-cyan);
 }
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -469,6 +472,8 @@ footer a {
   .footer-grid {
     grid-template-columns: 1fr;
     grid-template-rows: none;
+    text-overflow: wrap;
+    padding: 0 10px;
   }
   .divisions ul {
     flex-direction: column;
@@ -481,7 +486,7 @@ footer a {
   .divisions ul {
     gap: 10px;
   }
- .footer-social{
+  .footer-social {
     margin: 0 auto;
     /* place-content: center; */
   }

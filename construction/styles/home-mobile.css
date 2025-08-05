@@ -100,6 +100,20 @@
     border-radius: 10px;
   }
 
+  /* team */
+  .team-member {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .team-member img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 10%; */
+  }
+
   /* contact */
   .contact img {
     width: 100%;
