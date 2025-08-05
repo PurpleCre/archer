@@ -367,7 +367,7 @@
 
   /* hero */
   .hero {
-    height: 600px;
+    height: auto;
     padding: 0;
     width: 100%;
   }

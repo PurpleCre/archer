@@ -618,7 +618,7 @@ a.cta-button:hover {
   nav.show ul {
     background-color: rgba(1, 44, 117, 0.8);
     position: absolute;
-    top: 164px;
+    top: 160px;
     left: 0;
     right: 0;
     display: flex;
