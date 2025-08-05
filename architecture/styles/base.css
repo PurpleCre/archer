@@ -481,7 +481,8 @@ footer a {
   .footer-info {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    text-wrap: wrap;
+    /* justify-content: space-between; */
   }
   .divisions ul {
     gap: 10px;
