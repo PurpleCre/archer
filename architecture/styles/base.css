@@ -472,7 +472,7 @@ footer a {
   .footer-grid {
     grid-template-columns: 1fr;
     grid-template-rows: none;
-    text-overflow: wrap;
+    text-wrap: wrap;
     padding: 0 10px;
   }
   .divisions ul {
