@@ -31,6 +31,9 @@
   --secondary: var(--honolulu-blue);
   --accent: var(--pacific-cyan);
 }
+* {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
