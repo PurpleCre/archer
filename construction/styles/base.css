@@ -32,6 +32,21 @@
   --accent: var(--pacific-cyan);
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  /* height: auto; */
+  display: block;
+}
+
 html {
   scroll-behavior: smooth;
 }
