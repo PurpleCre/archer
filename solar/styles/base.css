@@ -489,7 +489,11 @@ footer a {
   .footer-info {
     flex-direction: row;
     flex-wrap: wrap;
+    text-wrap: wrap;
     justify-content: space-between;
+  }
+  #contact-info {
+    gap: 40px;
   }
   .divisions ul {
     gap: 10px;
