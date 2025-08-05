@@ -455,7 +455,8 @@ footer a {
 
   /* footer */
   footer {
-    padding: 0;
+    /* padding: 0; */
+    width: 100vw;
   }
   .footer-grid {
     grid-template-columns: 1fr;
